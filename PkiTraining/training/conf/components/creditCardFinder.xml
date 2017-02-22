@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="creditCardFinder" class="com.attivio.platform.transformer.ingest.field.ExtractRegexEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="entityType" value="creditcard"/>
+    <property name="outputAsField" value="false"/>
+    <property name="outputAsEntityTag" value="false"/>
+    <list name="regularExpressions">
+      <entry value="\b([0-9][0-9 \-]{11,17}[0-9])\b"/>
+    </list>
+    <container-property name="validator" reference="creditCardValidatorBean"/>
+  </properties>
+</component>

@@ -1,0 +1,5 @@
+SITENUM,PL_RACE_DEC,PL_SEX_DEC,PL_CTRY_DEC,CC_AGE,SUBID,sas.dataset
+123,caucasian,male,United States,33.0,100,DM
+123,caucasian,female,United States,28.0,100,DM
+123,asian,male,Canada,19.0,100,DM
+123,asian,female,United States,NaN,100,DM

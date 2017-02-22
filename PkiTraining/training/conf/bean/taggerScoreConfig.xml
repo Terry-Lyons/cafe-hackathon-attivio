@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util" xmlns:sec="http://www.springframework.org/schema/security" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <bean name="taggerScoreConfig" class="com.attivio.ontology.tagging.score.ScoreConfiguration">
+    <property name="global">
+      <list>
+        <ref bean="globalScore"/>
+      </list>
+    </property>
+    <property name="field">
+      <list>
+        <ref bean="titleScore"/>
+        <ref bean="synopsisScore"/>
+        <ref bean="bodyScore"/>
+      </list>
+    </property>
+    <property name="accrual">
+      <map key-type="">
+        <entry key="primary">
+          <value>100</value>
+        </entry>
+        <entry key="secondary">
+          <value>75</value>
+        </entry>
+      </map>
+    </property>
+  </bean>
+</beans>

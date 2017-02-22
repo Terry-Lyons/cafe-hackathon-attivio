@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-avro-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jtidy-r938-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/lucene-analyzers-common-5.2.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/boilerpipe-1.2.0-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/derbynet-10.10.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-expression-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/language-identifier-1.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/javax.el-2.2.0.v201108011116.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/curator-recipes-2.9.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-languagemodel.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/slf4j-api-1.6.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-sonar.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ant-launcher-1.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/geronimo-spec-j2ee-connector-1.5-rc4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hive-jdbc-1.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/rdf2go.impl.sesame23-4.7.3-SNAPSHOT-RTGO70.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/wsdl4j-1.6.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/platform-3.5.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/proj4j-0.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-base-connector.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jsch-0.1.51.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/dsn-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-yarn-api-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-server-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-core-api.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/snappy-java-1.1.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-codec-1.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-encoding-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-configuration-1.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bibsonomy-common-2.0.4.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jboss-marshalling-1.4.10.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-webmvc-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-math3-3.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-clustercontrol.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ical4j-vcard-0.9.3.ant20100406.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-databind-2.4.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-core-app.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-auth-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-websocket-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-dsdautorun.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-hdfs-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aopalliance-1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/opencsv-1.8.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-io-2.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jutf7-0.9.0.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-annotations-2.4.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-model.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-model/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-pool2-2.4.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/trove-2.0.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/apacheds-kerberos-codec-2.0.0-M15.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-common-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xmlbeans-2.5.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-sentiment.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jets3t-0.5.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-structureextraction.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jline-2.11.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bcprov-jdk14-1.43.bundle2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-common-core-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-agent-server.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-core-kernel.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-generator-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-springutil.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ant-1.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-email-1.3.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/sigar-1.6.4-attiviopatch2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-coretypes.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/icu4j-3.8.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/rtf2fo-3.4.4d.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/yjp-controller-api-redist.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/lucene-core-5.2.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-client.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-client/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/netty-all-4.0.23.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-adminui.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/narayana-jta-5.0.4.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/clapper-javautil-3.1.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/curator-x-discovery-2.9.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/api-util-1.0.0-M20.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-runtime-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/sbdf-6.5.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-runtime.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-gwt-commons.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-createproject.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-module-scheduler-sdk-client.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-module-scheduler-sdk-client/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-tx-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/httpcore-4.4.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-core-impl-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-fileupload-1.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-jndi-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-io-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-guiutil.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-engine-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-excelconnector.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/translator-jdbc-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jena-arq-2.9.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-jdbc-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-module-scheduler-sdk-model.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-module-scheduler-sdk-model/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-discovery-0.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/translator-hive-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/mule-1.4.4-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bibsonomy-model-2.0.4.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-webapp-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-alerts.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-base-transformer.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-deploy-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/json-lib-2013-04-13-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/api-asn1-api-1.0.0-M20.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-lang3-3.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/json-simple-1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-math-2.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-common-impl-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-jackson-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-lang-2.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-common-api-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/smtp-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-context-support-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jcodings-1.0.8.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-module-alerts.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-module-alerts/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/metrics-core-2.2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-security.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-rssconnector.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/guice-servlet-3.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/infinispan-core-7.2.3.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-client-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-core-model.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/derbytools-10.10.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-entityextraction.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-exposedapi.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aperture-tools-demork-1.0.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/guice-3.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-admin-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/gson-2.2.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-apisecurity.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/cssparser-0.9.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaxb-impl-2.2.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-core-2.4.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-textextraction.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/htmlunit-2.12-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jgroups-3.2.13.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jersey-server-1.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/tm-extractors-1.0-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-server.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-server/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-perfmon-client.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jul-to-slf4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/leveldbjni-all-1.8.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/asm-2.2.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-launcher.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jug-2.0.0-asl.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jersey-guice-1.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-util.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-businesscenter.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/postgresql-9.0-801.jdbc4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/log4j-1.2.15-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jboss-marshalling-river-1.4.10.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/quartz-jobs-2.2.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-federation.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-sqlsdk.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jboss-logging-3.1.4.GA-redhat-1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/poi-ooxml-schemas-3.7-20100617171931.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jacob-1.14.3.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/staxmapper-1.1.0.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/FastInfoset-1.2.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/zookeeper-3.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-deployers-common-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jersey-core-1.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/imap-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ant-contrib-1.0b3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-client-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/serializer-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-core-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-zoo.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/velocity-tools-1.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/geronimo-servlet_3.0_spec-1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/pop3-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/juniversalchardet-1.0.3.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-digester-2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bibsonomy-rest-client-2.0.4.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/poi-ooxml-3.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-httpclient-3.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/curator-client-2.9.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-sonarsdk.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xercesImpl-2.10.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jcl-over-slf4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jmxxsl.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-core-api-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jdom-1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/neethi-3.0.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-indexbackup.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jena-tdb-0.9.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/c3p0-0.9.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/quartz-2.2.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/heritrix-commons-2.0.2-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/netty-3.6.6.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/flickrapi-1.2.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/htrace-core-3.1.0-incubating.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/rome-0.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-autocomplete.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/htmlparser-1.6.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-entitysentiment.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-plus-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-collections-3.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/httpmime-4.5.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-agent-client.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-hadoop2-compat-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jmxremote_optional-1.0.1_04.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xstream-1.4.2-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-jdbc-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-common-1.1.2-tests.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-security-config-3.1.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-factbook.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/h2-1.3.167.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ant-junit-1.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/guava-14.0.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-clib.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jts2geojson-0.4.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/derbyclient-10.10.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/heritrix-modules-2.0.2-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/pdfbox-1.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-http-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/gwt-servlet-2.5.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ical4j-1.0-rc2-byantheque.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/istack-commons-runtime-2.2.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-store.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xalan-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bibsonomy-rest-common-2.0.4.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-yarn-common-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-common-spi-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-perfmon-server.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-net-2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/javax.inject-1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/Saxon-HE-9.5.1-6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/curator-framework-2.9.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/mstor-0.9.13-SNAPSHOT-aperture13.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-column-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jbig2-1.5.0_12-b04.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jersey-client-1.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/nux-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jboss-vfs-3.2.2.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/domingo-1.5.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/iscwt-5.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-util-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaxb2-basics-runtime-0.6.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-api-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-memory.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/axis-1.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xmlenc-0.52.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-keyphrases.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/javax.mail-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-security-ad.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/poi-scratchpad-3.2-NIObackport-20110105-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/rdf2go.api-4.8.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/derby-10.10.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-documentstore.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/stax-1.2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/joda-time-2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-security-core-3.1.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-context-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaxen-1.1.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jena-iri-0.9.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/org.eclipse.jdt.core-3.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-mule.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/disruptor-3.3.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/sac-1.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-compress-1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-cli-1.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-servlets-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-hadoop-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/fontbox-1.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/apacheds-i18n-2.0.0-M15.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/activation-1.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-classifier.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/lm-0.1-en.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-daemon-1.0.13.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-mapreduce-client-core-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-procedure-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/htmlunit-core-js-2.12.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-web-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-beans-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-server-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-protocol-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/com.sun.el-2.2.0.v201303151357.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jpod-5.2-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/sesame-runtime-osgi-2.3.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-jmeter.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jempbox-1.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/teiid-metadata-8.13.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-api.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jettison-1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/bcmail-jdk14-1.43.bundle2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaxb-core-2.2.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-basetypes.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-dbconnector.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-util-6.1.26.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/poi-contrib-3.2-NIObackport-20110105.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/velocity-1.6.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-beanutils-core-1.8.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-prefix-tree-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/dom4j-1.6.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-annotations-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-base-tokenizer.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/nekohtml-1.9.18-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/metadata-extractor-2.4.0-beta1.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-servlet-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-continuation-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/mx4j-tools-3.0.2-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/httpclient-4.5.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-jdbcutils.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-scheduler.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-morelikethis.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaudiotagger-1.0.8.bundle.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/org.osgi.core-4.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hibernate-validator-4.3.1.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jaxb-api-2.2.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-ontology.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/poi-3.2-NIObackport-20110105-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hadoop-annotations-2.7.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/fastutil-7.0.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-sail.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-xc-1.8.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-sigar.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/javax.servlet.jsp-2.2.0.v201112011158.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-opensearch.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jamon-runtime-2.3.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jts-1.13.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-6.1.26.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-externalconnector.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/mailapi-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/mail-1.4.5.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/concurrentlinkedhashmap-lru-1.3.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-format-2.2.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-sdk-module-scheduler-sdk-server.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file://opt/attivio/aie_5.1.6/webapps/docs/sdk-module-scheduler-sdk-server/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-common-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/parquet-common-1.6.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jna-3.5.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-profiler.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jena-core-2.7.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hbase-hadoop-compat-1.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-mobile-device-1.1.0.M2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/hsqldb-2.3.3-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-client-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/highcharts-1.4.0.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/org.apache.jasper.glassfish-2.2.2.v201112011158.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/unrar-alpha-0.1-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-agent-model.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jcifs-1.3.14.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jersey-json-1.9.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jsoup-1.7.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-advancedtextextraction.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/avro-1.7.4.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/paranamer-2.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/isrt-4.7.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-module-rest.jar">
+		<accessrules>
+			<accessrule kind="discouraged" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/ironjacamar-validator-1.1.9.Final.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-security-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jetty-xml-8.1.14.v20131031.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aie-platform-esb-model.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/xpp3-1.1.4c.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/commons-dbcp2-2.1.1.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/joni-2.1.2.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/jackson-jaxrs-1.8.3.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/spring-aop-3.2.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/lib/aperture-core-1.5.0-aie-5.1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/sdk/lib-test/aie-core-app-tests.jar"/>
+	<classpathentry exported="true" kind="var" path="AIE_INSTALL_LOCATION/sdk/lib-test/junit-4.10.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

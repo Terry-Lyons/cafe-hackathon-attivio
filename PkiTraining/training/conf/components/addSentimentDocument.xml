@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="addSentimentDocument" class="com.attivio.sentiment.transformer.ingest.document.AddSentimentDocument" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="modelName" value="sentiment/models/generic-sentiment.model"/>
+    <map name="stopWordDictionaries">
+      <property name="en" value="sentiment/dictionaries/small_stopwords_en.csv"/>
+    </map>
+    <list name="negationPatterns">
+      <entry value="not"/>
+      <entry value=".*n't"/>
+    </list>
+    <property name="lowerCase" value="true"/>
+    <property name="output" value="sentiment"/>
+    <property name="outputScore" value="sentiment.score"/>
+  </properties>
+</component>

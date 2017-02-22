@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<attivio xmlns="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd ">
+  <topology agentPort="16999" projectdir=".">
+    <configserver baseport="16980"/>
+    <store baseport="16970" gc="CMS"/>
+    <perfmonserver baseport="16960"/>
+    <nodes>
+      <node name="local" host="localhost" baseport="17000"/>
+    </nodes>
+    <nodesets>
+      <nodeset name="admin">
+        <!--Generated: The admin nodeset must contain exactly one node.-->
+        <include name="local"/>
+      </nodeset>
+      <nodeset name="connectors">
+        <include name="local"/>
+      </nodeset>
+      <nodeset name="processors">
+        <include name="local"/>
+      </nodeset>
+      <nodeset name="indexers">
+        <include name="local"/>
+      </nodeset>
+      <nodeset name="searchers">
+        <include name="local"/>
+      </nodeset>
+    </nodesets>
+  </topology>
+</attivio>

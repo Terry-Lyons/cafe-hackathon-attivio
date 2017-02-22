@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.attivio.com/configuration/type/schemaType" name="default" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.attivio.com/configuration/type/schemaType http://www.attivio.com/configuration/type/schemaType.xsd">
+  <fields default-search-field="content">
+    <field name="title" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+        <property name="highlight.fragment" value="false"/>
+        <property name="highlight.whitelist" value="content"/>
+        <property name="naturalLanguage" value="true"/>
+      </properties>
+    </field>
+    <field name="teaser" type="TEXT" multivalue="false" indexed="false" stored="true" sort="false"/>
+    <field name="author" displayName="Author" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="keywords" displayName="Keywords" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="language" displayName="Primary Language" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="languages" displayName="Detected Languages" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="uri" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="size" type="LONG" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="table" displayName="Table" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no" lowercase="yes">
+      <properties>
+        <property name="index.relevancy" value="false"/>
+      </properties>
+    </field>
+    <field name="cat" displayName="Category" type="STRING" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.termVector" value="true"/>
+      </properties>
+    </field>
+    <field name="date" displayName="Date" type="DATE" multivalue="false" indexed="true" stored="true" sort="true">
+      <properties>
+        <property name="workflow.date.format" value="MM/dd/yyyy"/>
+      </properties>
+    </field>
+    <field name="creationdate" displayName="Creation Date" type="DATE" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <realtimeField name="tags" displayName="Tags" multivalue="true" type="STRING" indexed="true" stored="true" sort="false"/>
+    <field name="text" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.fallbackField" value="teaser"/>
+        <property name="highlight.enabled" value="true"/>
+        <property name="highlight.fragment" value="true"/>
+        <property name="highlight.fragmentSize" value="100"/>
+        <property name="highlight.numFragments" value="3"/>
+        <property name="highlight.whitelist" value="content"/>
+        <property name="naturalLanguage" value="true"/>
+      </properties>
+    </field>
+    <field name="content" type="TEXT" multivalue="true" indexed="true" stored="false" sort="false">
+      <include-field name="title"/>
+      <include-field name="author"/>
+      <include-field name="text"/>
+      <include-field name="*_s"/>
+      <include-field name="*_text"/>
+      <include-field name="map"/>
+      <include-field name="locationDesc"/>
+      <include-field name="economy"/>
+      <include-field name="climate"/>
+      <include-field name="terrain"/>
+      <include-field name="resource"/>
+      <include-field name="spokenLanguage"/>
+      <include-field name="religion"/>
+      <include-field name="ethnicity"/>
+      <include-field name="agriprod"/>
+      <include-field name="industry"/>
+      <include-field name="country"/>
+    </field>
+    <field name="position" type="POINT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="latitude" type="DOUBLE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="longitude" type="DOUBLE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="shape" type="SHAPE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="to" type="STRING" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="bcc" type="STRING" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="cc" type="STRING" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="sourcepath" displayName="Source Path" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="filename" displayName="File Name" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="index.tokenizer" value="alphanum"/>
+      </properties>
+    </field>
+    <field name="mimetype" displayName="Mime Type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="parentmimetype" displayName="Parent Mime Type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="doctype" displayName="Document Type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="parentdoctype" displayName="Parent Document Type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="parentid" displayName="ParentDocID" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="ancestorids" displayName="AncestorIDs" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="entrynames" displayName="EntryNames" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="*_id" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_s" type="STRING" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_i" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_l" type="LONG" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_d" type="DOUBLE" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_f" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_m" type="MONEY" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_dec" type="DECIMAL" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="decimal.scale" value="8"/>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <realtimeField name="*_r" multivalue="true" type="STRING" indexed="true" stored="true" sort="false"/>
+    <field name="*_t" type="DATE" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="workflow.date.format" value="MM/dd/yyyy"/>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_text" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="naturalLanguage" value="true"/>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="*_mvs" type="STRING" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+    </field>
+    <field name="people" displayName="People" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="location" displayName="Locations" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="company" displayName="Companies" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="concepts" displayName="Concepts" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="hashtags" displayName="#HashTags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="mentions" displayName="@Mentions" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="people.statistical" displayName="People_stat" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="location.statistical" displayName="Locations_stat" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="company.statistical" displayName="Companies_stat" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="linkcount" type="INTEGER" multivalue="false" indexed="false" stored="true" sort="true"/>
+    <field name="linkfactor" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="anchortext" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="img.uri.thumbnail" displayName="Thumbnail Image URI" type="TEXT" multivalue="true" indexed="false" stored="true" sort="false"/>
+    <field name="img.uri.preview" displayName="Preview Image URI" type="TEXT" multivalue="true" indexed="false" stored="true" sort="false"/>
+    <field name="morelikethisquery" type="TEXT" multivalue="false" indexed="false" stored="true" sort="false"/>
+    <field name="processing.feedback.level" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="processing.feedback.message" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="processing.feedback.component" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="processing.feedback.code" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sentiment" displayName="Sentiment" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sentiment.score" displayName="Score" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sentiment.explain" displayName="Sentiment Explanation" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sentiment.explain.score" displayName="Sentiment Explanation Score" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="creditcard" displayName="Credit Card" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="socialsecurity" displayName="Social Security" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="zipcode" displayName="ZIP Code" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="guid" displayName="GUID" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="phonenumber" displayName="Phone Number" type="TEXT" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="sonar.namespace.id" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.orig.namespace.id" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.namespace.ids" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.id" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.data.scale" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.connector.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.owner" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.owner.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.object.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.fullname" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.query.filter" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.object.version" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.logo" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.sample.size" type="LONG" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.column" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.foreignkey.source.id" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.foreignkey.source.column" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.source.columns" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.user.columns" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="meta.tags" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="meta.columnar" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.field.classifications" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.field.classifications.facets" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.field.combined.label.tag.facets" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.display.name" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.display.name.search" type="TEXT" multivalue="false" indexed="true" stored="false" sort="false"/>
+    <field name="sonar.mart.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.spider.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.canonical.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.description" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.all.tags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.mart.tags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.spider.tags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.source.tags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.column.tags" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.create.date" type="DATE" multivalue="false" default="NOW" indexed="true" stored="true" sort="true"/>
+    <field name="sonar.update.date" type="DATE" multivalue="false" default="NOW" indexed="true" stored="true" sort="true"/>
+    <field name="sonar.spider.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.ingest.workflow" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.scanner.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.scanner.type.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.scanner.config" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.quality" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sonar.schedule" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.content" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false">
+      <properties>
+        <property name="wildcard.mode" value="prefix"/>
+        <property name="highlight.enabled" value="true"/>
+      </properties>
+      <include-field name="title"/>
+      <include-field name="author"/>
+      <include-field name="text"/>
+      <include-field name="anchortext"/>
+      <include-field name="people"/>
+      <include-field name="location"/>
+      <include-field name="company"/>
+      <include-field name="*_s"/>
+      <include-field name="*_mvs"/>
+      <include-field name="*_text"/>
+      <include-field name="*_i"/>
+      <include-field name="*_l"/>
+      <include-field name="*_d"/>
+      <include-field name="*_f"/>
+      <include-field name="*_m"/>
+      <include-field name="*_dec"/>
+      <include-field name="*_t"/>
+      <include-field name="sonar.display.name"/>
+      <include-field name="sonar.display.name.search"/>
+      <include-field name="sonar.description"/>
+      <include-field name="sonar.all.tags"/>
+      <include-field name="sonar.column.tags"/>
+      <include-field name="sonar.source.columns"/>
+      <include-field name="sonar.user.columns"/>
+      <include-field name="meta.tags"/>
+      <include-field name="meta.columnar"/>
+      <include-field name="sonar.owner"/>
+      <include-field name="sonar.source.fullname"/>
+    </field>
+    <field name="relational.digest" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.fulltablename" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.spidername" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.spiderid" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.tablename" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.schemaname" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.catalogname" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.source.connector.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.perimarykeyfld" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="relational.sql" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="relational.selectcolumns" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="pfrelations" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="pfprimaryuri" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="pfforeignuri" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="primarycomponents" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="foreigncomponents" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.product" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.quote" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.connection" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.db.user" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.db.password" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.propagate.credentials.to.db" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.relational.spider.jdbc.driver" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.csv.spider.force.string.types" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.csv.spider.file.system" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.csv.spider.principal" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.csv.spider.name.node.principal" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.csv.spider.keytable" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="sonar.original.table" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no" lowercase="yes">
+      <properties>
+        <property name="index.relevancy" value="false"/>
+      </properties>
+    </field>
+    <field name="keyphrases" displayName="Key Phrases" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no">
+      <properties>
+        <property name="facet.distributedMaxNumBuckets" value="1000"/>
+        <property name="facet.maxTerms" value="25000"/>
+        <property name="facet.outlierFactor" value="0.0"/>
+      </properties>
+    </field>
+    <field name="*_ent" type="STRING" multivalue="true" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="*_exp" type="STRING" multivalue="true" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="aboutness" type="STRING" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="aboutness_scores" type="STRING" multivalue="false" indexed="false" stored="true" sort="false" tokenize="no"/>
+    <field name="tagger.title" type="TEXT" multivalue="false" indexed="false" stored="false" sort="false" tokenize="yes">
+      <properties>
+        <property name="naturalLanguage" value="true"/>
+        <property name="synonyms.mode" value="on"/>
+      </properties>
+    </field>
+    <field name="tagger.synopsis" type="TEXT" multivalue="false" indexed="true" stored="false" sort="false">
+      <properties>
+        <property name="naturalLanguage" value="true"/>
+        <property name="synonyms.mode" value="on"/>
+      </properties>
+    </field>
+    <field name="tagger.text" type="TEXT" multivalue="false" indexed="true" stored="false" sort="false">
+      <properties>
+        <property name="naturalLanguage" value="true"/>
+        <property name="synonyms.mode" value="on"/>
+      </properties>
+    </field>
+    <field name="ont.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="ont.field.id" type="STRING" multivalue="false" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="ont.field.version" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="ont.field.deleted" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="ont.field.ontologyName" type="STRING" multivalue="false" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="ont.field.name" type="STRING" multivalue="false" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="ont.field.type" type="STRING" multivalue="false" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="ont.field.indexed" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="ont.field.classified" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="ont.field.preferred" type="BOOLEAN" multivalue="false" indexed="true" stored="true" sort="true"/>
+    <field name="ont.field.attr" type="STRING" multivalue="false" indexed="true" stored="true" sort="true" tokenize="no"/>
+    <field name="ont.field.rel" type="STRING" multivalue="true" indexed="false" stored="true" sort="false" tokenize="no"/>
+    <field name="ont.field.prop" type="TEXT" multivalue="true" indexed="false" stored="true" sort="false"/>
+    <field name="*_prop" type="TEXT" multivalue="false" indexed="false" stored="true" sort="false"/>
+    <field name="country" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="economy" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="locationDesc" type="STRING" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="map" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="climate" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="terrain" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="resource" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="spokenLanguage" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="religion" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="ethnicity" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="agriprod" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="industry" type="STRING" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="laborForce" type="LONG" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="unemploymentRate" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="inflationRate" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="publicDebt" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="gdp.purchasePowerParity" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="gdp.officialExchangeRate" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="gdp.growthRate" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="gdp.growthRatePerCapita" type="FLOAT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="application" displayName="Application" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="appversion" displayName="AppVersion" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="backupdate" displayName="BackupDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="basefilelocation" displayName="BaseFileLocation" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="billto" displayName="BillTo" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="checkedby" displayName="CheckedBy" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="childcount" displayName="ChildCount" type="LONG" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="childdocpaths" displayName="ChildDocumentPaths" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="childpath" displayName="ChildPath" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="childtype" displayName="ChildType" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="clientsubmittime" displayName="ClientSubmitTime" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="comments" displayName="Comments" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="completeddate" displayName="CompletedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="copyright" displayName="Copyright" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="description" displayName="Description" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="docrevnumber" displayName="DocRevDescriptor" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="docsecurity" displayName="DocSecurity" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="editminutes" displayName="EditMinutes" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="encoding" displayName="Encoding" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="fileext" displayName="FileExtension" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="footers" displayName="Footers" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="forwardto" displayName="ForwardTo" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="headers" displayName="Headers" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="istexttype" displayName="IsTextType" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="lastmodifier" displayName="LastModifier" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="lastprinteddate" displayName="LastPrintedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="lastsaveddate" displayName="LastSavedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="linksdirty" displayName="LinksDirty" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="linksuptodate" displayName="LinksUpToDate" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="mailstop" displayName="MailStop" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="manager" displayName="Manager" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numchars" displayName="NumChars" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numcharswithspaces" displayName="NumCharsWithSpaces" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numhiddenslides" displayName="NumHiddenSlides" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numlines" displayName="NumLines" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="nummmclips" displayName="NumMultimediaClips" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numnotes" displayName="NumNotes" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numpages" displayName="NumPages" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numparagraphs" displayName="NumParagraphs" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numslides" displayName="NumSlides" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="numwords" displayName="NumWords" type="INTEGER" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="presentationformat" displayName="PresentationFormat" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="receiveddate" displayName="ReceivedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sentdate" displayName="SentDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="receivedfrom" displayName="ReceivedFrom" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="recordedby" displayName="RecordedBy" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="recordeddate" displayName="RecordedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="reference" displayName="Reference" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="replyto" displayName="ReplyTo" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="revisiondate" displayName="RevisionDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="revisionnotes" displayName="RevisionNotes" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="scalecrop" displayName="ScaleCrop" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="shareddoc" displayName="SharedDoc" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sheetnames" displayName="SheetNames" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="sourcemodifieddate" displayName="SourceModifiedDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="sourceuri" displayName="SourceUri" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="subject" displayName="Subject" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="submittime" displayName="SubmitTime" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="template" displayName="Template" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="typist" displayName="Typist" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="versiondate" displayName="VersionDate" type="DATE" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="versionnotes" displayName="VersionNotes" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="versionnumber" displayName="VersionNumber" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="childindex" displayName="ChildIndex" type="LONG" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="links" displayName="Links" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="mailto" displayName="MailTo" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="watermark_type" displayName="WatermarkType" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="watermark_text" displayName="WatermarkText" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="transportmessageheaders" displayName="TransportMessageHeaders" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h1" displayName="HeadingLevel1" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h2" displayName="HeadingLevel2" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h3" displayName="HeadingLevel3" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h4" displayName="HeadingLevel4" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h5" displayName="HeadingLevel5" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="h6" displayName="HeadingLevel6" type="TEXT" multivalue="true" indexed="true" stored="true" sort="false"/>
+    <field name="metadata.title" displayName="Metadata Title" type="TEXT" multivalue="false" indexed="true" stored="true" sort="false"/>
+    <field name="entity.sentiment.pos" displayName="PositiveEntities" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="entity.sentiment.pos.score" displayName="PositiveEntityScores" type="FLOAT" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="entity.sentiment.neg" displayName="NegativeEntities" type="STRING" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+    <field name="entity.sentiment.neg.score" displayName="NegativeEntityScores" type="FLOAT" multivalue="true" indexed="true" stored="true" sort="false" tokenize="no"/>
+  </fields>
+</schema>

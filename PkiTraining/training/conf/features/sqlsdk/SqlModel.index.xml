@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsql="http://www.attivio.com/configuration/features/sqlsdk" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/sqlsdk http://www.attivio.com/configuration/features/sqlSdkFeatures.xsd">
+  <fsql:catalogs defaultCatalog="dynamic" defaultSchema="tables" enabled="true" featureNameSource="index" index="index" jvmOptions="-Xmx1024m" mode="dynamic">
+    <fsql:catalog name="static">
+      <fsql:schema name="aie">
+        <fsql:table name="files">
+          <fsql:query language="simple">filename:*</fsql:query>
+          <fsql:columns>
+            <fsql:column field="filename"/>
+            <fsql:column field="text"/>
+            <fsql:column field="date"/>
+            <fsql:column field="size"/>
+          </fsql:columns>
+        </fsql:table>
+        <fsql:mvfVirtualTable field="keyphrases" name="mvf_keyphrases"/>
+        <fsql:mvfVirtualTable field="location" name="mvf_location"/>
+        <fsql:mvfVirtualTable field="people" name="mvf_people"/>
+        <fsql:mvfVirtualTable field="mentions" name="mvf_mentions"/>
+        <fsql:mvfVirtualTable field="hashtags" name="mvf_hashtags"/>
+        <fsql:mvfVirtualTable field="company" name="mvf_company"/>
+      </fsql:schema>
+    </fsql:catalog>
+  </fsql:catalogs>
+</ff:features>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util" xmlns:sec="http://www.springframework.org/schema/security" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <bean name="checkLeadingTrailingSpaces" class="com.attivio.ontology.checker.RuleSpacesLeadingTrailing">
+    <property name="includes">
+      <list>
+        <value>term_id</value>
+        <value>term_name</value>
+        <value>term_attribute</value>
+        <value>term_note_name</value>
+        <value>term_relation_type</value>
+        <value>term_relation_name</value>
+      </list>
+    </property>
+  </bean>
+</beans>

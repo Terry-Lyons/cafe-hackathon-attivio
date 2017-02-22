@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="locationFinder" class="com.attivio.platform.transformer.ingest.field.ExtractDictionaryEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="entityType" value="location"/>
+    <property name="caseMode" value="TITLE"/>
+    <property name="caseSensitive" value="true"/>
+    <property name="allowOverlapping" value="false"/>
+    <property name="deletePattern"><![CDATA[[<>|@#\"(){}\[\]]]]></property>
+    <property name="dictionaryName" value="location"/>
+    <map name="dictionaries"/>
+  </properties>
+</component>

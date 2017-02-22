@@ -1,0 +1,13 @@
+- lib -- Use this directory for any library files that the project needs. 
+They will be added to the classpath in order for their classes to 
+be available.
+
+- lib-override -- Use this directory for any library files to that need to override 
+existing AIE libraries. They will appear earlier in the classpath than 
+the existing libraries and any classes they contain will be used instead 
+of those in the existing libraries.
+
+- resources -- You can add any additional resources (dictionaries, ontologies, etc.) 
+to this directory and they will be copied to the individual AIE servers 
+when the project is deployed.
+

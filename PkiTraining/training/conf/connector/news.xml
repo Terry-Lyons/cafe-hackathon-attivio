@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="news" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <labels>
+    <entry value="asap"/>
+    <entry value="asap-conn-dispname-news"/>
+  </labels>
+  <scanner class="com.attivio.connector.CsvScanner">
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="startDirectory" value="${factbook.content.dir}/news.csv"/>
+      <property name="idFieldFormat" value="NEWS-%s"/>
+      <property name="firstRowAreFieldNames" value="true"/>
+      <list name="idFields">
+        <entry value="uri"/>
+      </list>
+    </properties>
+  </scanner>
+  <feeder>
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="ingestWorkflowName" value="rssNews"/>
+      <property name="prefix" value="news-"/>
+      <map name="staticFields">
+        <property name="asap.application" value="Factbook"/>
+        <property name="asap.source.structured" value="true"/>
+        <property name="table" value="news"/>
+        <property name="asap.source.type" value="CSV Connector"/>
+      </map>
+    </properties>
+  </feeder>
+</connector>

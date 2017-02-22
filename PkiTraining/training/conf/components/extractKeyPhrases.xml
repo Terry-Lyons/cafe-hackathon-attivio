@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="extractKeyPhrases" class="com.attivio.platform.transformer.ingest.linguistics.StatisticalKeyPhraseExtractor" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="stopWordDictionaryName" value="keyphraseStopwords"/>
+    <map name="stopWordDictionaries">
+      <property name="en" value="keyphrases/dictionaries/very_common_words_en.csv"/>
+    </map>
+    <property name="useAllNaturalLanguageFields" value="true"/>
+    <property name="unigrams" value="false"/>
+    <property name="bigrams" value="true"/>
+    <property name="trigrams" value="false"/>
+    <property name="allowDuplicates" value="false"/>
+    <property name="output" value="keyphrases"/>
+  </properties>
+</component>

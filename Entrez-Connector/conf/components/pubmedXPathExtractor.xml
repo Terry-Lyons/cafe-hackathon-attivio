@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pubmedXPathExtractor" class="com.attivio.platform.transformer.ingest.xml.ExtractXPaths" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <list name="input">
+      <entry value="xmldom"/>
+    </list>
+    <map name="xpaths">
+      <property name="title" value="/PubmedArticle/MedlineCitation/Article/ArticleTitle"/>
+      <property name="creationdate" value="concat(/PubmedArticle/MedlineCitation/DateCreated/Year/text(),'-',/PubmedArticle/MedlineCitation/DateCreated/Month, '-', /PubmedArticle/MedlineCitation/DateCreated/Day)"/>
+      <property name="doi" value="/PubmedArticle/PubmedData/ArticleIdList//ArticleId[@IdType='doi']/text()"/>
+      <property name="pmcid" value="/PubmedArticle/PubmedData/ArticleIdList//ArticleId[@IdType='pmc']/text()"/>
+      <property name="pmid" value="/PubmedArticle/PubmedData/ArticleIdList//ArticleId[@IdType='pubmed']/text()"/>
+      <property name="copyright" value="/PubmedArticle/MedlineCitation/Article/Abstract/CopyrightInformation"/>
+      <property name="issn" value="/PubmedArticle/MedlineCitation/Article/Journal/ISSN"/>
+      <property name="journal_issue" value="/PubmedArticle/MedlineCitation/Article/Journal/JournalIssue/Issue"/>
+      <property name="journal_volume" value="/PubmedArticle/MedlineCitation/Article/Journal/JournalIssue/Volume"/>
+      <property name="journal_title" value="/PubmedArticle/MedlineCitation/Article/Journal/Title"/>
+      <property name="journal_isoabbrevation" value="/PubmedArticle/MedlineCitation/Article/Journal/ISOAbbreviation"/>
+      <property name="medlinepgn" value="/PubmedArticle/MedlineCitation/Article/Pagination/MedlinePgn"/>
+      <property name="journal_pubdate" value="concat(/PubmedArticle/MedlineCitation/Article/Journal/JournalIssue/PubDate/Year,'-',/PubmedArticle/MedlineCitation/Article/Journal/JournalIssue/PubDate/Month)"/>
+      <property name="text" value="/PubmedArticle/MedlineCitation/Article/Abstract/AbstractText"/>
+      <property name="author_lastname_s" value="/PubmedArticle/MedlineCitation/Article/AuthorList/Author/LastName"/>
+      <property name="author_forename_s" value="/PubmedArticle/MedlineCitation/Article/AuthorList/Author/ForeName"/>
+    </map>
+  </properties>
+</component>

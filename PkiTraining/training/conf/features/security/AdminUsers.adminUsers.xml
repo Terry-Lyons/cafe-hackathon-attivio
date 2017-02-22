@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.attivio.com/configuration/features/security" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/security http://www.attivio.com/configuration/features/securityFeatures.xsd">
+  <security:adminUsers enabled="true" name="adminUsers">
+    <security:attivioPrincipal name="Administrator" principalId="Administrator" realmId="Anonymous"/>
+  </security:adminUsers>
+</ff:features>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lm="http://www.attivio.com/configuration/features/languagemodel" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/languagemodel http://www.attivio.com/configuration/features/languagemodelFeatures.xsd">
+  <lm:languageModel enabled="true" nodeset="*" service="languageModelService"/>
+</ff:features>

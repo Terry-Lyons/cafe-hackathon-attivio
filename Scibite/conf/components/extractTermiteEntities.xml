@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="extractTermiteEntities" class="com.sisu.attivio.transformer.ingest.ExtractTermiteEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="termiteUrl" value="${scibite.host}"/>
+    <list name="inputFields">
+      <entry value="text"/>
+      <entry value="title"/>
+    </list>
+  </properties>
+</component>

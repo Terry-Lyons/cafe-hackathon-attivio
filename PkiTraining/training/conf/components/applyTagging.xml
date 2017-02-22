@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="applyTagging" class="com.attivio.ontology.transformer.query.TaggingExecutor" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="taggerName" value="ontologyTagger"/>
+    <list name="fields">
+      <entry value="tagger.title"/>
+      <entry value="tagger.synopsis"/>
+      <entry value="tagger.text"/>
+    </list>
+  </properties>
+</component>

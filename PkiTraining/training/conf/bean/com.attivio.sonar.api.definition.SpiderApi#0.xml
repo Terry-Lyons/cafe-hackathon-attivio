@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util" xmlns:sec="http://www.springframework.org/schema/security" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <bean name="com.attivio.sonar.api.definition.SpiderApi#0" class="com.attivio.sonar.api.definition.SpiderApi">
+    <property name="embeddedDrivers">
+      <set>
+        <value>oracle.jdbc.OracleDriver</value>
+        <value>com.mysql.jdbc.Driver</value>
+        <value>net.sourceforge.jtds.jdbc.Driver</value>
+        <value>org.hsqldb.jdbcDriver</value>
+        <value>org.hsqldb.jdbc.JDBCDriver</value>
+        <value>org.postgresql.Driver</value>
+        <value>com.teradata.jdbc.TeraDriver</value>
+        <value>org.h2.Driver</value>
+      </set>
+    </property>
+    <property name="driverInfo">
+      <map key-type="">
+        <entry key="oracle.jdbc.OracleDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>Oracle</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:oracle:thin:@^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>1521</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="com.mysql.jdbc.Driver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>false</value>
+            </entry>
+            <entry key="driverName">
+              <value>MySQL</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:mysql://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>3306</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="net.sourceforge.jtds.jdbc.Driver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>SqlServer/Sybase</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:jtds:^{Server Type=sqlserver|sybase}://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>1433</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="org.hsqldb.jdbc.JDBCDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>HSQLDB</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:hsqldb:^{Server Type=hsql|hsqls|http|https}://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>9001</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="org.postgresql.Driver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>PostgreSQL</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:postgresql://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>5432</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="com.teradata.jdbc.TeraDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>false</value>
+            </entry>
+            <entry key="driverName">
+              <value>TeraData</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:teradata://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>1025</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="org.apache.hive.jdbc.HiveDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>Hive</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:hive2://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>10000</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="org.h2.Driver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>true</value>
+            </entry>
+            <entry key="driverName">
+              <value>H2</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:h2:^{Server Type=file|zip|tcp|ssl}://^{HOSTPORT}^{DBCHAR=/}^{DBNAME}</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>8082</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="com.ddtek.jdbc.sforce.SForceDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>false</value>
+            </entry>
+            <entry key="driverName">
+              <value>Salesforce</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value>jdbc:datadirect:sforce://login.salesforce.com</value>
+            </entry>
+            <entry key="defaultPort">
+              <value>0</value>
+            </entry>
+          </map>
+        </entry>
+        <entry key="sybase.jdbc4.sqlanywhere.IDriver">
+          <map key-type="">
+            <entry key="distributedByAttivio">
+              <value>false</value>
+            </entry>
+            <entry key="driverName">
+              <value>SybaseIQ</value>
+            </entry>
+            <entry key="connectionTemplate">
+              <value></value>
+            </entry>
+            <entry key="defaultPort">
+              <value>0</value>
+            </entry>
+          </map>
+        </entry>
+      </map>
+    </property>
+    <property name="dbQuoteStrings">
+      <map key-type="">
+        <entry key="sql server">
+          <value>"</value>
+        </entry>
+        <entry key="greenplum">
+          <value>"</value>
+        </entry>
+        <entry key="postgres">
+          <value>"</value>
+        </entry>
+        <entry key="oracle">
+          <value>"</value>
+        </entry>
+        <entry key="sybase iq">
+          <value>"</value>
+        </entry>
+        <entry key="teradata">
+          <value>"</value>
+        </entry>
+        <entry key="hive">
+          <value>`</value>
+        </entry>
+        <entry key="h2">
+          <value>`</value>
+        </entry>
+        <entry key="mysql">
+          <value>`</value>
+        </entry>
+        <entry key="salesforce">
+          <value>"</value>
+        </entry>
+      </map>
+    </property>
+    <property name="sqlConcatOperator">
+      <map key-type="">
+        <entry key="org.postgresql.Driver">
+          <value>||</value>
+        </entry>
+        <entry key="com.teradata.jdbc.TeraDriver">
+          <value>||</value>
+        </entry>
+        <entry key="sybase.jdbc4.sqlanywhere.IDriver">
+          <value>||</value>
+        </entry>
+      </map>
+    </property>
+    <property name="schemaListers">
+      <map key-type="">
+        <entry key="mysql">
+          <value>CatalogOnlyLister</value>
+        </entry>
+        <entry key="postgres">
+          <value>SingleCatalogLister</value>
+        </entry>
+        <entry key="sql server">
+          <value>TableBasedSchemaLister</value>
+        </entry>
+        <entry key="sybase iq">
+          <value>SingleCatalogListerWithSchemaSupport</value>
+        </entry>
+      </map>
+    </property>
+  </bean>
+</beans>

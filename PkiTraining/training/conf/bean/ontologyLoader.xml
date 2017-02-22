@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util" xmlns:sec="http://www.springframework.org/schema/security" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <bean name="ontologyLoader" class="com.attivio.ontology.loader.ZthesStreamingLoader">
+    <property name="ontologyFile" value="conf/ontology/ontologies/ontology.xml"/>
+    <property name="modelFile" value="conf/ontology/ontologies/ontology-model.xml"/>
+    <property name="classRelationships">
+      <map key-type="">
+        <entry key="*">
+          <list>
+            <value>Broader Term</value>
+          </list>
+        </entry>
+        <entry key="Country">
+          <list>
+            <value>Part of Region</value>
+          </list>
+        </entry>
+      </map>
+    </property>
+  </bean>
+</beans>

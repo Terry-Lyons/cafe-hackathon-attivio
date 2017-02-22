@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util" xmlns:sec="http://www.springframework.org/schema/security" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <bean name="b" class="com.attivio.federation.client.teiid.TeiidFetchedDataMartApiImpl">
+    <property name="nativeLibraryPath">
+      <list/>
+    </property>
+    <property name="translatorMap">
+      <map key-type="">
+        <entry key="ACCESS">
+          <value>org.teiid.translator.jdbc.access.AccessExecutionFactory</value>
+        </entry>
+        <entry key="DB2">
+          <value>org.teiid.translator.jdbc.db2.DB2ExecutionFactory</value>
+        </entry>
+        <entry key="DERBY">
+          <value>org.teiid.translator.jdbc.derby.DerbyExecutionFactory</value>
+        </entry>
+        <entry key="EXCEL">
+          <value>org.teiid.translator.jdbc.excel.ExcelExecutionFactory</value>
+        </entry>
+        <entry key="H2">
+          <value>org.teiid.translator.jdbc.h2.H2ExecutionFactory</value>
+        </entry>
+        <entry key="HANA">
+          <value>org.teiid.translator.jdbc.hana.HanaExecutionFactory</value>
+        </entry>
+        <entry key="HSQL">
+          <value>com.attivio.federation.server.executiondelegators.HSQLExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="INFORMIX">
+          <value>org.teiid.translator.jdbc.informix.InformixExecutionFactory</value>
+        </entry>
+        <entry key="INGRES">
+          <value>org.teiid.translator.jdbc.ingres.IngresExecutionFactory</value>
+        </entry>
+        <entry key="INTERSYSCACHE">
+          <value>org.teiid.translator.jdbc.intersyscache.InterSystemsCacheExecutionFactory</value>
+        </entry>
+        <entry key="MM">
+          <value>org.teiid.translator.jdbc.mm.MetaMatrixExecutionFactory</value>
+        </entry>
+        <entry key="MODESHAPE">
+          <value>org.teiid.translator.jdbc.modeshape.ModeShapeExecutionFactory</value>
+        </entry>
+        <entry key="MYSQL">
+          <value>com.attivio.federation.server.executiondelegators.MySQL5ExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="NETEZZA">
+          <value>org.teiid.translator.jdbc.netezza.NetezzaExecutionFactory</value>
+        </entry>
+        <entry key="ORACLE">
+          <value>com.attivio.federation.server.executiondelegators.OracleExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="POSTGRESQL">
+          <value>com.attivio.federation.server.executiondelegators.PostgreSQLExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="Microsoft SQL Server">
+          <value>com.attivio.federation.server.executiondelegators.SQLServerExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="SYBASE">
+          <value>org.teiid.translator.jdbc.sybase.BaseSybaseExecutionFactory</value>
+        </entry>
+        <entry key="Teiid Server">
+          <value>com.attivio.federation.server.executiondelegators.TeiidExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="TERADATA">
+          <value>org.teiid.translator.jdbc.teradata.TeradataExecutionFactory</value>
+        </entry>
+        <entry key="UCANACCESS">
+          <value>org.teiid.translator.jdbc.ucanaccess.UCanAccessExecutionFactory</value>
+        </entry>
+        <entry key="Apache Hive">
+          <value>com.attivio.federation.server.executiondelegators.HiveExecutionFactoryDelegator</value>
+        </entry>
+        <entry key="JDBC">
+          <value>org.teiid.translator.jdbc.JDBCExecutionFactory</value>
+        </entry>
+      </map>
+    </property>
+  </bean>
+</beans>

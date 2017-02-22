@@ -1,0 +1,8 @@
+<attivio>
+    <module name="module-groovyexcelconnector" version="2" aie.version="5.1.9">
+        <description>Wraps existing Excel connector with Groovy Scripting for SDTM conversion</description>
+        <connectors>
+            <connector name="groovyexcel" class="com.sisu.pki.connector.GroovyScriptedExcelScanner" />
+        </connectors>
+    </module>
+</attivio>

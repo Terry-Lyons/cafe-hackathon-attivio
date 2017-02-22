@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ont="http://www.attivio.com/configuration/features/ontology" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/ontology http://www.attivio.com/configuration/features/ontologyFeatures.xsd">
+  <ont:tagger enabled="true" name="ontologyTagger" nodeset="*" ontology="ontology" workflow="suggestTags">
+    <ont:types>
+      <ont:include class="Country"/>
+      <ont:include class="Region"/>
+    </ont:types>
+    <ont:relationships name="primary">
+      <ont:class name="Country">
+        <ont:follow>
+          <ont:relationship name="Part of Region" qualifier="HIGHEST"/>
+        </ont:follow>
+      </ont:class>
+    </ont:relationships>
+    <ont:relationships name="secondary">
+      <ont:class name="Region">
+        <ont:follow>
+          <ont:relationship name="Broader Term" qualifier="ALL"/>
+        </ont:follow>
+      </ont:class>
+      <ont:class name="Country">
+        <ont:follow>
+          <ont:relationship name="Part of Region" qualifier="DIRECT"/>
+        </ont:follow>
+      </ont:class>
+    </ont:relationships>
+    <ont:scoreConfig ref="taggerScoreConfig"/>
+  </ont:tagger>
+</ff:features>

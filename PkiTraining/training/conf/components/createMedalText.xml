@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="createMedalText" class="com.attivio.platform.transformer.ingest.field.SubstituteStrings" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <list name="input">
+      <entry value="total_i"/>
+    </list>
+    <property name="output" value="text"/>
+    <property name="format" value="Total medals in 2008: %s"/>
+  </properties>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="companyFinder" class="com.attivio.platform.transformer.ingest.field.ExtractDictionaryEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="entityType" value="company"/>
+    <property name="caseMode" value="TITLE"/>
+    <property name="caseSensitive" value="true"/>
+    <property name="deletePattern"><![CDATA[[<>|@#\"(){}\[\]]]]></property>
+    <property name="dictionaryName" value="company"/>
+    <map name="dictionaries"/>
+  </properties>
+</component>

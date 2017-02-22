@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ont="http://www.attivio.com/configuration/features/ontology" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/ontology http://www.attivio.com/configuration/features/ontologyFeatures.xsd">
+  <ont:entityDictionary enabled="true" name="ontologyEntityDictionary" nodeset="*" ontology="ontology" useTypedEntities="false">
+    <ont:resource location="${data.directory}/ontology/ontology_entities_ee.csv"/>
+  </ont:entityDictionary>
+</ff:features>

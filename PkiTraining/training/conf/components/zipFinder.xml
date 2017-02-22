@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zipFinder" class="com.attivio.platform.transformer.ingest.field.ExtractRegexEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="entityType" value="zipcode"/>
+    <property name="outputAsField" value="false"/>
+    <property name="outputAsEntityTag" value="false"/>
+    <list name="regularExpressions">
+      <entry value="\d{5}(?:[-\s]\d{4})?"/>
+    </list>
+  </properties>
+</component>

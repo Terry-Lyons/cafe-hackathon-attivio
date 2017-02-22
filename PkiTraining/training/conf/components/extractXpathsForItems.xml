@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="extractXpathsForItems" class="com.attivio.platform.transformer.ingest.xml.ExtractXPaths" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <map name="xpaths">
+      <property name="title" value="title"/>
+      <property name="src_s" value="source"/>
+      <property name="uri" value="link"/>
+      <property name="text" value="description"/>
+    </map>
+  </properties>
+</component>

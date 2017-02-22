@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="entrezPubMedScanner" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+    <scanner class="com.sisu.attivio.scanner.EntrezScanner">
+        <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+            <property name="maxResults" value="25000"/>
+            <property name="resultsPerQuery" value="50"/>
+            <list name="queries">
+                <entry value="diabetes[MeSH Major Topic]) AND (&quot;2015&quot;[Date - Publication] : &quot;3000&quot;[Date - Publication]"/>
+            </list>
+        </properties>
+    </scanner>
+    <feeder class="com.attivio.connector.DirectMessagePublisher">
+        <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+            <map name="sizeToDomain"/>
+            <list name="documentStoreFilterFields">
+                <entry value="table"/>
+            </list>
+            <property name="ingestWorkflowName" value="pubmedIngest"/>
+        </properties>
+    </feeder>
+</connector>

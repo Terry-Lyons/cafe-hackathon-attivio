@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="addEntitySentiment" class="com.attivio.entitysentiment.transformer.ingest.document.AddEntitySentiment" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="stopWordDictionaryName" value="entitySentimentStopwords"/>
+    <map name="stopWordDictionaries">
+      <property name="en" value="classifier/dictionaries/small_stopwords_en.csv"/>
+    </map>
+    <list name="negationPatterns">
+      <entry value="not"/>
+      <entry value=".*n't"/>
+    </list>
+    <property name="modelName" value="${entitysentiment.defaultModelFileName}"/>
+    <property name="useAllNaturalLanguageFields" value="true"/>
+    <property name="lowerCase" value="true"/>
+    <property name="posOutput" value="entity.sentiment.pos"/>
+    <property name="posOutputScore" value="entity.sentiment.pos.score"/>
+    <property name="negOutput" value="entity.sentiment.neg"/>
+    <property name="negOutputScore" value="entity.sentiment.neg.score"/>
+    <property name="includingSentences" value="true"/>
+    <property name="includingNounPhrases" value="false"/>
+    <property name="useEmptyModelIfNoneFound" value="true"/>
+    <property name="minimumPositiveValue" value="0.5"/>
+    <property name="minimumNegativeValue" value="0.5"/>
+    <property name="maxEntities" value="3"/>
+    <property name="blurriness" value="10"/>
+    <property name="defaultLocale" value="en"/>
+  </properties>
+</component>

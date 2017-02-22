@@ -1,0 +1,117 @@
+group 'com.sisu'
+version '1.1.0'
+description 'NCBI Entrez integration for Attivio 5'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+String attivioSdk = ""
+Properties props = new Properties()
+props.load(new FileInputStream(rootDir.getAbsolutePath() + '/secret.properties'))
+if(System.getenv("ATTIVIO_SDK")) {
+    attivioSdk = System.getenv("ATTIVIO_SDK").trim()
+}else {
+    attivioSdk = props.getProperty("attivio.sdk", "")
+}
+if (attivioSdk.isEmpty()) {
+    System.err.println("Attivio SDK not found! Either set your ATTIVIO_SDK env variable or add attivio.sdk to secret.propreties!")
+}
+
+FileTree attivioSdkFiles = fileTree(include: ['*.jar'], dir: attivioSdk, excludes: ['slf4j-log4j*'])
+
+configurations {
+    moduleDist
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/internal/'
+    }
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/snapshots/'
+    }
+}
+
+dependencies {
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile group: 'com.github.jknack', name: 'handlebars', version: '4.0.6'
+    compile attivioSdkFiles
+
+    testCompile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.6.1'
+    testCompile 'org.apache.curator:curator-test:2.7.1'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Module': rootProject.name,
+                'Version': project.version
+        )
+    }
+    eachFile {
+        if (it.name == 'attivio.module.xml') {
+            it.filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
+                    module_name: rootProject.name,
+                    build_version: '1',
+                    aie_version: '5.1.9',
+                    description: rootProject.description
+            ])
+        }
+    }
+}
+
+clean {
+    delete 'lib', 'lib-override', 'resources'
+}
+
+task deploy(type: Copy, dependsOn: build) {
+    copy {
+        from 'build/libs'
+        from configurations.compile.filter { !(it in attivioSdkFiles.files) }
+        into 'lib'
+    }
+
+    copy {
+        from 'build/resources/main'
+        include '**/*'
+        exclude 'META-INF/*'
+        exclude 'attivio.module.xml'
+        into 'resources'
+        includeEmptyDirs = false
+    }
+
+}
+
+task distTar(type: Tar, dependsOn: deploy) {
+    classifier = 'dist'
+    extension = 'tar.gz'
+    compression = Compression.GZIP
+
+    from('build/libs') {
+        into 'lib'
+    }
+
+    from('lib') {
+        into 'lib'
+    }
+
+    from('conf') {
+        into 'conf'
+    }
+
+    from('resources') {
+        into 'resources'
+    }
+
+}

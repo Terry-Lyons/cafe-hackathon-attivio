@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fbase="http://www.attivio.com/configuration/features/base" xmlns:f="http://www.attivio.com/configuration/features/core" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/base http://www.attivio.com/configuration/features/baseFeatures.xsd http://www.attivio.com/configuration/features/core http://www.attivio.com/configuration/features/coreFeatures.xsd">
+  <f:deployWebapp context-path="/dictionaryadmin" directory="webapps/dictionaryadmin" enabled="true" featureNameSource="contextPath" nodeset="*" requires-authentication="true">
+    <f:menuEntry blank="true" label="Dictionary Administration" path="business-center"/>
+    <f:role name="ABC_Administrator"/>
+    <f:role name="ABC_Manager"/>
+    <f:role name="ABC_User"/>
+  </f:deployWebapp>
+</ff:features>

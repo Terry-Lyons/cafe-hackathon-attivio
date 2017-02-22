@@ -1,0 +1,2438 @@
+{
+    "RESP_META": {
+        "CONID": "10.16.51.39/66",
+        "HTTP_CODE": "200",
+        "INPUT_SIZE": 1415,
+        "JSON_PRODUCER": "EFFICIENT",
+        "REQID": "4aa453d4-8785-48e3-bd22-f179ff255e59",
+        "RUNTIME_OPTIONS": {},
+        "TERMITE_VERS": "5.7.86",
+        "Timing_msec_TOTAL": "7"
+    },
+    "RESP_PAYLOAD": {
+        "ADVENTMED": [
+            {
+                "dictSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "mapping-raw": "{FDA=[osteopenia], MEDDRA_PT=[osteopenia], MEDDRA=[MDR10049088]}"
+                },
+                "entityType": "ADVENTMED",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            50,
+                            60
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1405,
+                            1415
+                        ]
+                    }
+                ],
+                "exact_string": "1#50-60,7#1405-1415",
+                "frag_vector_array": [
+                    "1#cluding osteoporosis and {!osteopenia!} occur frequently in both",
+                    "7#ociated osteoporosis and {!osteopenia!}"
+                ],
+                "hitCount": 2,
+                "hitID": "ADVEN05944",
+                "hit_loc_vector": [
+                    1,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "ADVENTMED"
+                },
+                "name": "osteopenia",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    6,
+                    37
+                ]
+            },
+            {
+                "dictSynList": [
+                    "neurofibromatosis"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "mapping-raw": "{FDA=[neurofibromatosis], MEDDRA_PT=[neurofibromatosis], MEDDRA=[MDR10029268]}"
+                },
+                "entityType": "ADVENTMED",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            106,
+                            123
+                        ]
+                    }
+                ],
+                "exact_string": "1#106-123",
+                "frag_vector_array": [
+                    "1#both pediatric and adult {!neurofibromatosis!} type 1 (NF1) patients."
+                ],
+                "hitCount": 1,
+                "hitID": "ADVEN05614",
+                "hit_loc_vector": [
+                    1
+                ],
+                "kvp": {
+                    "entityType": "ADVENTMED"
+                },
+                "name": "neurofibromatosis",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "neurofibromatosis"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    14
+                ]
+            },
+            {
+                "dictSynList": [
+                    "osteoporosis",
+                    "osteoporosis"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "mapping-raw": "{OPENTOX=[Osteoporosis], FDA=[Osteoporosis], MEDDRA_PT=[osteoporosis], MEDDRA=[MDR10031282]}"
+                },
+                "entityType": "ADVENTMED",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            33,
+                            45
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1388,
+                            1400
+                        ]
+                    }
+                ],
+                "exact_string": "1#33-45,7#1388-1400",
+                "frag_vector_array": [
+                    "1#abnormalities including {!osteoporosis!} and osteopenia occur fre",
+                    "7#treating NF1 associated {!osteoporosis!} and osteopenia"
+                ],
+                "hitCount": 2,
+                "hitID": "ADVEN05946",
+                "hit_loc_vector": [
+                    1,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "ADVENTMED"
+                },
+                "name": "osteoporosis",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "osteoporosis",
+                    "osteoporosis"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    4,
+                    35
+                ]
+            },
+            {
+                "dictSynList": [
+                    "bone loss"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "mapping-raw": "{FDA=[bone loss], MEDDRA_PT=[bone loss], MEDDRA=[MDR10065687]}"
+                },
+                "entityType": "ADVENTMED",
+                "exact_array": [
+                    {
+                        "fls": [
+                            6,
+                            1041,
+                            1050
+                        ]
+                    }
+                ],
+                "exact_string": "6#1041-1050",
+                "frag_vector_array": [
+                    "6#d that PLX3397 prevented {!bone loss!} in Nf1(+/-)-OVX mice by"
+                ],
+                "hitCount": 1,
+                "hitID": "ADVEN01201",
+                "hit_loc_vector": [
+                    6
+                ],
+                "kvp": {
+                    "entityType": "ADVENTMED"
+                },
+                "name": "bone loss",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "bone loss"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    6
+                ]
+            }
+        ],
+        "ANAT": [
+            {
+                "dictSynList": [
+                    "bone",
+                    "bone",
+                    "bone",
+                    "bone"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "Uberon",
+                    "_ext_uri": "http://purl.obolibrary.org/obo/UBERON_0002481",
+                    "_termite_id": "TAN005968",
+                    "alt_id": "UBERON_0002481"
+                },
+                "entityType": "ANAT",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            313,
+                            317
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            972,
+                            976
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1041,
+                            1045
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1115,
+                            1119
+                        ]
+                    }
+                ],
+                "exact_string": "2#313-317,5#972-976,6#1041-1045,6#1115-1119",
+                "frag_vector_array": [
+                    "2#ntiation, migration, and {!bone!} resorptive capacity in v",
+                    "5#and evaluated changes in {!bone!} mass and skeletal archit",
+                    "6#d that PLX3397 prevented {!bone!} loss in Nf1(+/-)-OVX mic",
+                    "6#last differentiation and {!bone!} resorptive activity in v"
+                ],
+                "hitCount": 4,
+                "hitID": "U0002481",
+                "hit_loc_vector": [
+                    2,
+                    5,
+                    6,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "ANAT"
+                },
+                "name": "bone tissue",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "bone",
+                    "bone",
+                    "bone",
+                    "bone"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    21,
+                    18,
+                    6,
+                    17
+                ]
+            },
+            {
+                "dictSynList": [
+                    "bone",
+                    "bone",
+                    "bone",
+                    "bone"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "Uberon",
+                    "_ext_uri": "http://purl.obolibrary.org/obo/UBERON_0001474",
+                    "_termite_id": "TAN007948",
+                    "alt_id": "UBERON_0001474"
+                },
+                "entityType": "ANAT",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            313,
+                            317
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            972,
+                            976
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1041,
+                            1045
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1115,
+                            1119
+                        ]
+                    }
+                ],
+                "exact_string": "2#313-317,5#972-976,6#1041-1045,6#1115-1119",
+                "frag_vector_array": [
+                    "2#ntiation, migration, and {!bone!} resorptive capacity in v",
+                    "5#and evaluated changes in {!bone!} mass and skeletal archit",
+                    "6#d that PLX3397 prevented {!bone!} loss in Nf1(+/-)-OVX mic",
+                    "6#last differentiation and {!bone!} resorptive activity in v"
+                ],
+                "hitCount": 4,
+                "hitID": "U0001474",
+                "hit_loc_vector": [
+                    2,
+                    5,
+                    6,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "ANAT"
+                },
+                "name": "bone element",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "bone",
+                    "bone",
+                    "bone",
+                    "bone"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    21,
+                    18,
+                    6,
+                    17
+                ]
+            }
+        ],
+        "BIOPROC": [
+            {
+                "dictSynList": [
+                    "therapeutic target"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TBP002578"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            7,
+                            1341,
+                            1359
+                        ]
+                    }
+                ],
+                "exact_string": "7#1341-1359",
+                "frag_vector_array": [
+                    "7#may provide a potential {!therapeutic target!} for treating NF1 associa"
+                ],
+                "hitCount": 1,
+                "hitID": "BP71232",
+                "hit_loc_vector": [
+                    7
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [
+                    "BAO|http://purl.obolibrary.org/obo/CHEBI_66991|http://purl.obolibrary.org/obo/CHEBI_66991:seeAlso"
+                ],
+                "name": "target",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "therapeutic target"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    29
+                ]
+            },
+            {
+                "dictSynList": [
+                    "in vitro"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TBP002096"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            338,
+                            346
+                        ]
+                    }
+                ],
+                "exact_string": "2#338-346",
+                "frag_vector_array": [
+                    "2#bone resorptive capacity {!in vitro!}, mediated by hyperactiva"
+                ],
+                "hitCount": 1,
+                "hitID": "BP70297",
+                "hit_loc_vector": [
+                    2
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [],
+                "name": "in vitro",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "in vitro"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    24
+                ]
+            },
+            {
+                "dictSynList": [
+                    "in vivo",
+                    "in vivo"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TBP002097"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            5,
+                            855,
+                            862
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1140,
+                            1147
+                        ]
+                    }
+                ],
+                "exact_string": "5#855-862,6#1140-1147",
+                "frag_vector_array": [
+                    "5#{!In vivo!}, we administered PLX3397",
+                    "6#bone resorptive activity {!in vivo!}."
+                ],
+                "hitCount": 2,
+                "hitID": "BP70298",
+                "hit_loc_vector": [
+                    5,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [],
+                "name": "in vivo",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "In vivo",
+                    "in vivo"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    1,
+                    20
+                ]
+            },
+            {
+                "dictSynList": [
+                    "differentiation",
+                    "differentiation"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D002454",
+                    "_termite_id": "TBP000113",
+                    "mesh_tree": "G04.299.151;"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            281,
+                            296
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1095,
+                            1110
+                        ]
+                    }
+                ],
+                "exact_string": "2#281-296,6#1095-1110",
+                "frag_vector_array": [
+                    "2#) mice exhibit increased {!differentiation!}, migration, and bone res",
+                    "6#e by reducing osteoclast {!differentiation!} and bone resorptive acti"
+                ],
+                "hitCount": 2,
+                "hitID": "D002454",
+                "hit_loc_vector": [
+                    2,
+                    6
+                ],
+                "kvp": {
+                    "boosted": "[progenitors]",
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [
+                    "BAO|http://purl.obolibrary.org/obo/GO_0002574|http://purl.obolibrary.org/obo/GO_0002574:seeAlso",
+                    "BAO|http://www.bioassayontology.org/bao#BAO_0002087|http://www.bioassayontology.org/bao#BAO_0002087:seeAlso"
+                ],
+                "name": "Cell Differentiation",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "differentiation",
+                    "differentiation"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    18,
+                    15
+                ]
+            },
+            {
+                "dictSynList": [
+                    "bone resorptive",
+                    "bone mass",
+                    "bone loss",
+                    "bone resorptive"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D001862",
+                    "_termite_id": "TBP000090",
+                    "mesh_tree": "C05.116.264;G11.427.590.195.150;"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            313,
+                            328
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            972,
+                            981
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1041,
+                            1050
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1115,
+                            1130
+                        ]
+                    }
+                ],
+                "exact_string": "2#313-328,5#972-981,6#1041-1050,6#1115-1130",
+                "frag_vector_array": [
+                    "2#ntiation, migration, and {!bone resorptive!} capacity in vitro, media",
+                    "5#and evaluated changes in {!bone mass!} and skeletal architectur",
+                    "6#d that PLX3397 prevented {!bone loss!} in Nf1(+/-)-OVX mice by",
+                    "6#last differentiation and {!bone resorptive!} activity in vivo."
+                ],
+                "hitCount": 4,
+                "hitID": "D001862",
+                "hit_loc_vector": [
+                    2,
+                    5,
+                    6,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [],
+                "name": "Bone Resorption",
+                "nonambigsyns": 3,
+                "realSynList": [
+                    "bone resorptive",
+                    "bone mass",
+                    "bone loss",
+                    "bone resorptive"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 3,
+                "word_pos_array": [
+                    21,
+                    18,
+                    6,
+                    17
+                ]
+            },
+            {
+                "dictSynList": [
+                    "potent"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TBP002247"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            4,
+                            710,
+                            716
+                        ]
+                    }
+                ],
+                "exact_string": "4#710-716",
+                "frag_vector_array": [
+                    "4#PLX3397, a {!potent!} and selective c-Fms inhi"
+                ],
+                "hitCount": 1,
+                "hitID": "BP70448",
+                "hit_loc_vector": [
+                    4
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [],
+                "name": "potent",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "potent"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    3
+                ]
+            },
+            {
+                "dictSynList": [
+                    "adhesion"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TBP001879"
+                },
+                "entityType": "BIOPROC",
+                "exact_array": [
+                    {
+                        "fls": [
+                            4,
+                            812,
+                            820
+                        ]
+                    }
+                ],
+                "exact_string": "4#812-820",
+                "frag_vector_array": [
+                    "4#oclast migration by 50%, {!adhesion!} by 70%, and pit formatio"
+                ],
+                "hitCount": 1,
+                "hitID": "BP70080",
+                "hit_loc_vector": [
+                    4
+                ],
+                "kvp": {
+                    "entityType": "BIOPROC"
+                },
+                "mappings": [
+                    "BAO|http://www.bioassayontology.org/bao#BAO_0000237|http://www.bioassayontology.org/bao#BAO_0000237:seeAlso",
+                    "BAO|http://www.bioassayontology.org/bao#BAO_0002101|http://www.bioassayontology.org/bao#BAO_0002101:seeAlso"
+                ],
+                "name": "adherence",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "adhesion"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    18
+                ]
+            }
+        ],
+        "DRUG": [
+            {
+                "dictSynList": [
+                    "plx3397",
+                    "plx3397",
+                    "plx3397"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TDG049492"
+                },
+                "entityType": "DRUG",
+                "exact_array": [
+                    {
+                        "fls": [
+                            4,
+                            699,
+                            706
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            880,
+                            887
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1023,
+                            1030
+                        ]
+                    }
+                ],
+                "exact_string": "4#699-706,5#880-887,6#1023-1030",
+                "frag_vector_array": [
+                    "4#{!PLX3397!}, a potent and selective",
+                    "5#In vivo, we administered {!PLX3397!} to Nf1(+/-) osteoporotic",
+                    "6#We found that {!PLX3397!} prevented bone loss in N"
+                ],
+                "hitCount": 3,
+                "hitID": "PHRM6E2E209763C66AA56160FD4E2B7DE45B",
+                "hit_loc_vector": [
+                    4,
+                    5,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "DRUG"
+                },
+                "mappings": [],
+                "name": "PLX 3397",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "PLX3397",
+                    "PLX3397",
+                    "PLX3397"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    1,
+                    5,
+                    4
+                ]
+            }
+        ],
+        "ENDOCELL": [
+            {
+                "dictSynList": [
+                    "osteoclasts",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclasts"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "Cell_Line_Ontology",
+                    "_ext_uri": "http://purl.obolibrary.org/obo/CL_:0000092",
+                    "_termite_id": "TEC001464"
+                },
+                "entityType": "ENDOCELL",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            175,
+                            186
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            191,
+                            201
+                        ]
+                    },
+                    {
+                        "fls": [
+                            3,
+                            586,
+                            596
+                        ]
+                    },
+                    {
+                        "fls": [
+                            4,
+                            783,
+                            793
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1084,
+                            1094
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1301,
+                            1312
+                        ]
+                    }
+                ],
+                "exact_string": "2#175-186,2#191-201,3#586-596,4#783-793,6#1084-1094,7#1301-1312",
+                "frag_vector_array": [
+                    "2#(Nf1) haploinsufficient {!osteoclasts!} and osteoclast progenito",
+                    "2#fficient osteoclasts and {!osteoclast!} progenitors derived from",
+                    "3#ctivation in Nf1(+/) (-) {!osteoclast!} progenitors, mediating m",
+                    "4#M-CSF mediated Nf1(+/-) {!osteoclast!} migration by 50%, adhesi",
+                    "6#/-)-OVX mice by reducing {!osteoclast!} differentiation and bone",
+                    "7#of Nf1 haploinsufficient {!osteoclasts!} and may provide a potent"
+                ],
+                "hitCount": 6,
+                "hitID": "CL:0000092",
+                "hit_loc_vector": [
+                    2,
+                    2,
+                    3,
+                    4,
+                    6,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "ENDOCELL"
+                },
+                "name": "osteoclast",
+                "nonambigsyns": 2,
+                "realSynList": [
+                    "osteoclasts",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclast",
+                    "osteoclasts"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 2,
+                "word_pos_array": [
+                    4,
+                    6,
+                    21,
+                    14,
+                    14,
+                    23
+                ]
+            },
+            {
+                "dictSynList": [
+                    "macrophage"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "Cell_Line_Ontology",
+                    "_ext_uri": "http://purl.obolibrary.org/obo/CL_:0000235",
+                    "_termite_id": "TEC001137"
+                },
+                "entityType": "ENDOCELL",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            430,
+                            440
+                        ]
+                    }
+                ],
+                "exact_string": "2#430-440",
+                "frag_vector_array": [
+                    "2#miting concentrations of {!macrophage!}-colony stimulating facto"
+                ],
+                "hitCount": 1,
+                "hitID": "CL:0000235",
+                "hit_loc_vector": [
+                    2
+                ],
+                "kvp": {
+                    "entityType": "ENDOCELL",
+                    "hyphenated": 1
+                },
+                "name": "macrophage",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "macrophage"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    38
+                ]
+            }
+        ],
+        "GENE": [
+            {
+                "dictSynList": [
+                    "c fms",
+                    "c fms",
+                    "c fms",
+                    "c fms"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=CSF1R",
+                    "_termite_id": "TGE004478"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            3,
+                            526,
+                            531
+                        ]
+                    },
+                    {
+                        "fls": [
+                            3,
+                            554,
+                            559
+                        ]
+                    },
+                    {
+                        "fls": [
+                            4,
+                            731,
+                            736
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1197,
+                            1202
+                        ]
+                    }
+                ],
+                "exact_string": "3#526-531,3#554-559,4#731-736,7#1197-1202",
+                "frag_vector_array": [
+                    "3#binding to its receptor, {!c-Fms!}, results in increased c-",
+                    "3#ms, results in increased {!c-Fms!} activation in Nf1(+/) (-",
+                    "4#, a potent and selective {!c-Fms!} inhibitor, attenuated M-",
+                    "7#ults implicate the M-CSF/{!c-Fms!} signaling axis as a crit"
+                ],
+                "hitCount": 4,
+                "hitID": "CSF1R",
+                "hit_loc_vector": [
+                    3,
+                    3,
+                    4,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true,
+                    "gboost_in_sent": true
+                },
+                "mappings": [
+                    "MGI|MGI:1339758|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000182578|xRef:match",
+                    "CHEMBL_TARGET|CHEMBL1844|xRef",
+                    "SCIBITE|GENE:CSF1R|seeAlso",
+                    "RGD|2425|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P07333|xRef:match",
+                    "OPENPHACTS_TARGET|P07333|seeAlso",
+                    "PDB|P07333|seeAlso",
+                    "ENTREZ|1436|xRef:match"
+                ],
+                "name": "colony stimulating factor 1 receptor",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "c-Fms",
+                    "c-Fms",
+                    "c-Fms",
+                    "c-Fms"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "CHEMBL_PC": {
+                        "CHEMBL_PC/CHEMBL_PC:1/CHEMBL_PC:6/CHEMBL_PC:1100/CHEMBL_PC:1285/CHEMBL_PC:159": "CHEMBL_PC/Enzyme/Kinase/Protein Kinase/TK protein kinase group/Tyrosine protein kinase PDGFR family"
+                    },
+                    "PROTYP": {
+                        "PROTYP/PROTYP15": "PROTYP/oncogene",
+                        "PROTYP/PROTYP3": "PROTYP/cd antigen"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    11,
+                    16,
+                    6,
+                    8
+                ]
+            },
+            {
+                "dictSynList": [
+                    "macrophage colony stimulating factor",
+                    "m csf",
+                    "m csf",
+                    "m csf",
+                    "m csf"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=CSF1",
+                    "_termite_id": "TGE004477"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            430,
+                            466
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            468,
+                            473
+                        ]
+                    },
+                    {
+                        "fls": [
+                            3,
+                            495,
+                            500
+                        ]
+                    },
+                    {
+                        "fls": [
+                            4,
+                            759,
+                            764
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1191,
+                            1196
+                        ]
+                    }
+                ],
+                "exact_string": "2#430-466,2#468-473,3#495-500,4#759-764,7#1191-1196",
+                "frag_vector_array": [
+                    "2#miting concentrations of {!macrophage-colony stimulating factor!} (M-CSF).",
+                    "2#lony stimulating factor ({!M-CSF!}).",
+                    "3#Here, we show that {!M-CSF!} binding to its receptor,",
+                    "4#ms inhibitor, attenuated {!M-CSF!} mediated Nf1(+/-) osteoc",
+                    "7#se results implicate the {!M-CSF!}/c-Fms signaling axis as"
+                ],
+                "hitCount": 5,
+                "hitID": "CSF1",
+                "hit_loc_vector": [
+                    2,
+                    2,
+                    3,
+                    4,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true,
+                    "gboost_in_sent": true
+                },
+                "mappings": [
+                    "MGI|MGI:1339753|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000184371|xRef:match",
+                    "SCIBITE|GENE:CSF1|seeAlso",
+                    "RGD|621063|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P09603|xRef:match",
+                    "OPENPHACTS_TARGET|P09603|seeAlso",
+                    "PDB|P09603|seeAlso",
+                    "ENTREZ|1435|xRef:match"
+                ],
+                "name": "colony stimulating factor 1 (macrophage)",
+                "nonambigsyns": 2,
+                "realSynList": [
+                    "macrophage-colony stimulating factor",
+                    "M-CSF",
+                    "M-CSF",
+                    "M-CSF",
+                    "M-CSF"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 2,
+                "word_pos_array": [
+                    38,
+                    42,
+                    5,
+                    10,
+                    6
+                ]
+            },
+            {
+                "dictSynList": [
+                    "neurofibromatosis type 1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=NF1",
+                    "_termite_id": "TGE012069"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            106,
+                            130
+                        ]
+                    },
+                    {
+                        "fls": [
+                            1,
+                            132,
+                            135
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            147,
+                            150
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            152,
+                            155
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            232,
+                            235
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            249,
+                            252
+                        ]
+                    },
+                    {
+                        "fls": [
+                            3,
+                            574,
+                            577
+                        ]
+                    },
+                    {
+                        "fls": [
+                            4,
+                            774,
+                            777
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            891,
+                            894
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1054,
+                            1057
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1279,
+                            1282
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1373,
+                            1376
+                        ]
+                    }
+                ],
+                "exact_string": "1#106-130,1#132-135,2#147-150,2#152-155,2#232-235,2#249-252,3#574-577,4#774-777,5#891-894,6#1054-1057,7#1279-1282,7#1373-1376",
+                "frag_vector_array": [
+                    "1#both pediatric and adult {!neurofibromatosis type 1!} (NF1) patients.",
+                    "1#eurofibromatosis type 1 ({!NF1!}) patients.",
+                    "2#{!NF1!} (Nf1) haploinsufficient",
+                    "2#NF1 ({!Nf1!}) haploinsufficient osteo",
+                    "2#nitors derived from both {!NF1!} patients and Nf1(+/-) mi",
+                    "2#om both NF1 patients and {!Nf1!}(+/-) mice exhibit increa",
+                    "3#ased c-Fms activation in {!Nf1!}(+/) (-) osteoclast proge",
+                    "4#ttenuated M-CSF mediated {!Nf1!}(+/-) osteoclast migratio",
+                    "5#administered PLX3397 to {!Nf1!}(+/-) osteoporotic mice i",
+                    "6#7 prevented bone loss in {!Nf1!}(+/-)-OVX mice by reducin",
+                    "7#aberrant functioning of {!Nf1!} haploinsufficient osteoc",
+                    "7#utic target for treating {!NF1!} associated osteoporosis"
+                ],
+                "hitCount": 12,
+                "hitID": "NF1",
+                "hit_loc_vector": [
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true,
+                    "gboost_in_sent": true
+                },
+                "mappings": [
+                    "MGI|MGI:97306|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000196712|xRef:match",
+                    "ENSEMBL|LRG_214|xRef:match",
+                    "SCIBITE|GENE:NF1|seeAlso",
+                    "RGD|3168|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P21359|xRef:match",
+                    "OPENPHACTS_TARGET|P21359|seeAlso",
+                    "PDB|P21359|seeAlso",
+                    "ENTREZ|101930150|xRef:match",
+                    "ENTREZ|4763|xRef:match"
+                ],
+                "name": "neurofibromin 1",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "neurofibromatosis type 1",
+                    "NF1",
+                    "NF1",
+                    "Nf1",
+                    "NF1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "NF1"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 2,
+                "word_pos_array": [
+                    14,
+                    17,
+                    1,
+                    2,
+                    11,
+                    14,
+                    20,
+                    13,
+                    7,
+                    9,
+                    21,
+                    33
+                ]
+            },
+            {
+                "dictSynList": [
+                    "erk2"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=MAPK1",
+                    "_termite_id": "TGE010821"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            3,
+                            680,
+                            686
+                        ]
+                    }
+                ],
+                "exact_string": "3#680-686",
+                "frag_vector_array": [
+                    "3#the downstream effectors {*Erk1/2*} and p90RSK."
+                ],
+                "hitCount": 1,
+                "hitID": "MAPK1",
+                "hit_loc_vector": [
+                    3
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true,
+                    "lookaround": "true",
+                    "lookaroundOnly": "true"
+                },
+                "mappings": [
+                    "MGI|MGI:1346858|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000100030|xRef:match",
+                    "CHEMBL_TARGET|CHEMBL4040|xRef",
+                    "CHEMBL_TARGET|CHEMBL1907606|xRef",
+                    "SCIBITE|GENE:MAPK1|seeAlso",
+                    "RGD|70500|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P28482|xRef:match",
+                    "OPENPHACTS_TARGET|P28482|seeAlso",
+                    "PDB|P28482|seeAlso",
+                    "ENTREZ|5594|xRef:match"
+                ],
+                "name": "mitogen-activated protein kinase 1",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "Erk1/2"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "CHEMBL_PC": {
+                        "CHEMBL_PC/CHEMBL_PC:1/CHEMBL_PC:6/CHEMBL_PC:1100/CHEMBL_PC:148/CHEMBL_PC:249/CHEMBL_PC:329": "CHEMBL_PC/Enzyme/Kinase/Protein Kinase/CMGC protein kinase group/CMGC protein kinase MAPK family/CMGC protein kinase ERK subfamily"
+                    },
+                    "PROTYP": {
+                        "PROTYP/PROTYP2": "PROTYP/kinase",
+                        "PROTYP/PROTYP208": "PROTYP/map kinase",
+                        "PROTYP/PROTYP448": "PROTYP/erk kinase",
+                        "PROTYP/PROTYP50": "PROTYP/tyrosine kinase",
+                        "PROTYP/PROTYP6": "PROTYP/protein kinase",
+                        "PROTYP/PROTYP8433": "PROTYP/mitogen-activated protein kinase p38"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    32
+                ]
+            },
+            {
+                "dictSynList": [
+                    "p21 ras"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=HRAS",
+                    "_termite_id": "TGE008707"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            379,
+                            387
+                        ]
+                    }
+                ],
+                "exact_string": "2#379-387",
+                "frag_vector_array": [
+                    "2#ed by hyperactivation of {!p21(Ras)!} in response to limiting"
+                ],
+                "hitCount": 1,
+                "hitID": "HRAS",
+                "hit_loc_vector": [
+                    2
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true
+                },
+                "mappings": [
+                    "MGI|MGI:96224|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000174775|xRef:match",
+                    "CHEMBL_TARGET|CHEMBL2167|xRef",
+                    "SCIBITE|GENE:HRAS|seeAlso",
+                    "RGD|2827|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P01112|xRef:match",
+                    "OPENPHACTS_TARGET|P01112|seeAlso",
+                    "PDB|P01112|seeAlso",
+                    "ENTREZ|3265|xRef:match"
+                ],
+                "name": "Harvey rat sarcoma viral oncogene homolog",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "p21(Ras)"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "CHEMBL_PC": {
+                        "CHEMBL_PC/CHEMBL_PC:8": "CHEMBL_PC/Other cytosolic protein"
+                    },
+                    "PROTYP": {
+                        "PROTYP/PROTYP15": "PROTYP/oncogene",
+                        "PROTYP/PROTYP1927": "PROTYP/p21 cdkn",
+                        "PROTYP/PROTYP30": "PROTYP/gtpase"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    30
+                ]
+            },
+            {
+                "dictSynList": [
+                    "erk1"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "HGNC",
+                    "_ext_uri": "http://www.genenames.org/cgi-bin/gene_symbol_report?match=MAPK3",
+                    "_termite_id": "TGE010829"
+                },
+                "entityType": "GENE",
+                "exact_array": [
+                    {
+                        "fls": [
+                            3,
+                            680,
+                            684
+                        ]
+                    }
+                ],
+                "exact_string": "3#680-684",
+                "frag_vector_array": [
+                    "3#the downstream effectors {!Erk1!}/2 and p90RSK."
+                ],
+                "hitCount": 1,
+                "hitID": "MAPK3",
+                "hit_loc_vector": [
+                    3
+                ],
+                "kvp": {
+                    "entityType": "GENE",
+                    "gboost_in_all": true
+                },
+                "mappings": [
+                    "MGI|MGI:1346859|closeMatch:from_human_to_mouse@9606=>10090",
+                    "ENSEMBL|ENSG00000102882|xRef:match",
+                    "CHEMBL_TARGET|CHEMBL3385|xRef",
+                    "CHEMBL_TARGET|CHEMBL1907606|xRef",
+                    "SCIBITE|GENE:MAPK3|seeAlso",
+                    "RGD|3046|closeMatch:from_human_to_rat@9606=>10114",
+                    "UNIPROT|P27361|xRef:match",
+                    "OPENPHACTS_TARGET|P27361|seeAlso",
+                    "PDB|P27361|seeAlso",
+                    "ENTREZ|5595|xRef:match"
+                ],
+                "name": "mitogen-activated protein kinase 3",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "Erk1"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "CHEMBL_PC": {
+                        "CHEMBL_PC/CHEMBL_PC:1/CHEMBL_PC:6/CHEMBL_PC:1100/CHEMBL_PC:148/CHEMBL_PC:249/CHEMBL_PC:329": "CHEMBL_PC/Enzyme/Kinase/Protein Kinase/CMGC protein kinase group/CMGC protein kinase MAPK family/CMGC protein kinase ERK subfamily"
+                    },
+                    "PROTYP": {
+                        "PROTYP/PROTYP1208": "PROTYP/map kinase kinase",
+                        "PROTYP/PROTYP2": "PROTYP/kinase",
+                        "PROTYP/PROTYP208": "PROTYP/map kinase",
+                        "PROTYP/PROTYP448": "PROTYP/erk kinase",
+                        "PROTYP/PROTYP6": "PROTYP/protein kinase",
+                        "PROTYP/PROTYP8217": "PROTYP/extracellular signal related kinase",
+                        "PROTYP/PROTYP8433": "PROTYP/mitogen-activated protein kinase p38"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    32
+                ]
+            }
+        ],
+        "INDICATION": [
+            {
+                "dictSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_termite_id": "TIN004583",
+                    "mesh_tree": ";"
+                },
+                "entityType": "INDICATION",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            50,
+                            60
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1405,
+                            1415
+                        ]
+                    }
+                ],
+                "exact_string": "1#50-60,7#1405-1415",
+                "frag_vector_array": [
+                    "1#cluding osteoporosis and {!osteopenia!} occur frequently in both",
+                    "7#ociated osteoporosis and {!osteopenia!}"
+                ],
+                "hitCount": 2,
+                "hitID": "DX90157",
+                "hit_loc_vector": [
+                    1,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "INDICATION"
+                },
+                "mappings": [],
+                "name": "Osteopenia",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    6,
+                    37
+                ]
+            },
+            {
+                "dictSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D001851",
+                    "_termite_id": "TIN000311",
+                    "mesh_tree": "C05.116.198;"
+                },
+                "entityType": "INDICATION",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            50,
+                            60
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1405,
+                            1415
+                        ]
+                    }
+                ],
+                "exact_string": "1#50-60,7#1405-1415",
+                "frag_vector_array": [
+                    "1#cluding osteoporosis and {!osteopenia!} occur frequently in both",
+                    "7#ociated osteoporosis and {!osteopenia!}"
+                ],
+                "hitCount": 2,
+                "hitID": "D001851",
+                "hit_loc_vector": [
+                    1,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "INDICATION"
+                },
+                "mappings": [
+                    "SCIBITE|INDICATION:D001851|seeAlso",
+                    "OMIM|212066|narrower",
+                    "OMIM|146350|narrower",
+                    "OMIM|259690|narrower",
+                    "OMIM|166350|narrower",
+                    "OMIM|166710|narrower",
+                    "OMIM|268130|narrower",
+                    "UMLS|C0005944|xRef"
+                ],
+                "name": "Metabolic Bone Diseases",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "osteopenia",
+                    "osteopenia"
+                ],
+                "rejected": false,
+                "score": 2,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "MESH:IND": {
+                        "MESH:IND/C05/C05.116/C05.116.198": "MESH:IND/Musculoskeletal Diseases/Bone Diseases/Bone Diseases, Metabolic"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    6,
+                    37
+                ]
+            },
+            {
+                "dictSynList": [
+                    "osteoporosis",
+                    "osteoporotic",
+                    "osteoporosis"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D010024",
+                    "_termite_id": "TIN001888",
+                    "mesh_tree": "C05.116.198.579;"
+                },
+                "entityType": "INDICATION",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            33,
+                            45
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            900,
+                            912
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1388,
+                            1400
+                        ]
+                    }
+                ],
+                "exact_string": "1#33-45,5#900-912,7#1388-1400",
+                "frag_vector_array": [
+                    "1#abnormalities including {!osteoporosis!} and osteopenia occur fre",
+                    "5#ered PLX3397 to Nf1(+/-) {!osteoporotic!} mice induced by ovariect",
+                    "7#treating NF1 associated {!osteoporosis!} and osteopenia"
+                ],
+                "hitCount": 3,
+                "hitID": "D010024",
+                "hit_loc_vector": [
+                    1,
+                    5,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "INDICATION"
+                },
+                "mappings": [
+                    "ICD9|7330|xRef",
+                    "ICD9|73300|xRef",
+                    "SNOMED|156825006|xRef",
+                    "SNOMED|203428004|xRef",
+                    "SNOMED|203440004|xRef",
+                    "SNOMED|64859006|xRef",
+                    "HDO|DOID:11476|xRef",
+                    "SCIBITE|INDICATION:D010024|seeAlso",
+                    "OMIM|166710|xRef",
+                    "OMIM|613418|narrower",
+                    "OMIM|133780|narrower",
+                    "OMIM|612286|narrower",
+                    "OMIM|612287|narrower",
+                    "OMIM|182250|narrower",
+                    "UMLS|C0029456|xRef",
+                    "UMLS|C0029456|xRef"
+                ],
+                "name": "Osteoporosis",
+                "nonambigsyns": 2,
+                "realSynList": [
+                    "osteoporosis",
+                    "osteoporotic",
+                    "osteoporosis"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "MESH:IND": {
+                        "MESH:IND/C05/C05.116/C05.116.198/C05.116.198.579": "MESH:IND/Musculoskeletal Diseases/Bone Diseases/Bone Diseases, Metabolic/Osteoporosis"
+                    }
+                },
+                "totnosyns": 2,
+                "word_pos_array": [
+                    4,
+                    8,
+                    35
+                ]
+            },
+            {
+                "dictSynList": [
+                    "neurofibromatosis type 1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1",
+                    "nf1"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D009456",
+                    "_termite_id": "TIN001802",
+                    "mesh_tree": "C04.557.580.600.580.590.650;C04.700.645.650;C10.562.600.500;C10.574.500.549.400;C10.668.829.675;C16.320.400.560.400;C16.320.700.645.650;"
+                },
+                "entityType": "INDICATION",
+                "exact_array": [
+                    {
+                        "fls": [
+                            1,
+                            106,
+                            130
+                        ]
+                    },
+                    {
+                        "fls": [
+                            1,
+                            132,
+                            135
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            147,
+                            150
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            152,
+                            155
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            232,
+                            235
+                        ]
+                    },
+                    {
+                        "fls": [
+                            2,
+                            249,
+                            252
+                        ]
+                    },
+                    {
+                        "fls": [
+                            3,
+                            574,
+                            577
+                        ]
+                    },
+                    {
+                        "fls": [
+                            4,
+                            774,
+                            777
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            891,
+                            894
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1054,
+                            1057
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1279,
+                            1282
+                        ]
+                    },
+                    {
+                        "fls": [
+                            7,
+                            1373,
+                            1376
+                        ]
+                    }
+                ],
+                "exact_string": "1#106-130,1#132-135,2#147-150,2#152-155,2#232-235,2#249-252,3#574-577,4#774-777,5#891-894,6#1054-1057,7#1279-1282,7#1373-1376",
+                "frag_vector_array": [
+                    "1#both pediatric and adult {!neurofibromatosis type 1!} (NF1) patients.",
+                    "1#eurofibromatosis type 1 ({!NF1!}) patients.",
+                    "2#{!NF1!} (Nf1) haploinsufficient",
+                    "2#NF1 ({!Nf1!}) haploinsufficient osteo",
+                    "2#nitors derived from both {!NF1!} patients and Nf1(+/-) mi",
+                    "2#om both NF1 patients and {!Nf1!}(+/-) mice exhibit increa",
+                    "3#ased c-Fms activation in {!Nf1!}(+/) (-) osteoclast proge",
+                    "4#ttenuated M-CSF mediated {!Nf1!}(+/-) osteoclast migratio",
+                    "5#administered PLX3397 to {!Nf1!}(+/-) osteoporotic mice i",
+                    "6#7 prevented bone loss in {!Nf1!}(+/-)-OVX mice by reducin",
+                    "7#aberrant functioning of {!Nf1!} haploinsufficient osteoc",
+                    "7#utic target for treating {!NF1!} associated osteoporosis"
+                ],
+                "hitCount": 12,
+                "hitID": "D009456",
+                "hit_loc_vector": [
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    7
+                ],
+                "kvp": {
+                    "entityType": "INDICATION"
+                },
+                "mappings": [
+                    "ICD9|23771|xRef",
+                    "SNOMED|154642000|xRef",
+                    "SNOMED|19133005|xRef",
+                    "SNOMED|81669005|xRef",
+                    "SNOMED|92503002|xRef",
+                    "SNOMED|92824003|xRef",
+                    "HDO|DOID:8712|xRef",
+                    "SCIBITE|INDICATION:D009456|seeAlso",
+                    "OMIM|101000|xRef",
+                    "OMIM|162200|xRef",
+                    "OMIM|162270|xRef",
+                    "OMIM|162200|xRef",
+                    "OMIM|193520|narrower",
+                    "UMLS|C0027831|xRef",
+                    "UMLS|C0027832|xRef",
+                    "UMLS|C0162678|xRef",
+                    "UMLS|C0220695|xRef",
+                    "UMLS|C0027831|xRef"
+                ],
+                "name": "Neurofibromatosis",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "neurofibromatosis type 1",
+                    "NF1",
+                    "NF1",
+                    "Nf1",
+                    "NF1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "Nf1",
+                    "NF1"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "MESH:IND": {
+                        "MESH:IND/C04/C04.557/C04.557.580/C04.557.580.600/C04.557.580.600.580/C04.557.580.600.580.590/C04.557.580.600.580.590.650": "MESH:IND/Neoplasms/Neoplasms by Histologic Type/Neoplasms, Nerve Tissue/Nerve Sheath Neoplasms/Neurofibroma/Neurofibromatoses/Neurofibromatosis 1",
+                        "MESH:IND/C04/C04.700/C04.700.645/C04.700.645.650": "MESH:IND/Neoplasms/Neoplastic Syndromes, Hereditary/Neurofibromatoses/Neurofibromatosis 1",
+                        "MESH:IND/C10/C10.562/C10.562.600/C10.562.600.500": "MESH:IND/Nervous System Diseases/Neurocutaneous Syndromes/Neurofibromatoses/Neurofibromatosis 1",
+                        "MESH:IND/C10/C10.574/C10.574.500/C10.574.500.549/C10.574.500.549.400": "MESH:IND/Nervous System Diseases/Neurodegenerative Diseases/Heredodegenerative Disorders, Nervous System/Neurofibromatoses/Neurofibromatosis 1",
+                        "MESH:IND/C10/C10.668/C10.668.829/C10.668.829.675": "MESH:IND/Nervous System Diseases/Neuromuscular Diseases/Peripheral Nervous System Diseases/Neurofibromatosis 1",
+                        "MESH:IND/C16/C16.320/C16.320.400/C16.320.400.560/C16.320.400.560.400": "MESH:IND/Congenital, Hereditary, and Neonatal Diseases and Abnormalities/Genetic Diseases, Inborn/Heredodegenerative Disorders, Nervous System/Neurofibromatoses/Neurofibromatosis 1",
+                        "MESH:IND/C16/C16.320/C16.320.700/C16.320.700.645/C16.320.700.645.650": "MESH:IND/Congenital, Hereditary, and Neonatal Diseases and Abnormalities/Genetic Diseases, Inborn/Neoplastic Syndromes, Hereditary/Neurofibromatoses/Neurofibromatosis 1"
+                    }
+                },
+                "totnosyns": 2,
+                "word_pos_array": [
+                    14,
+                    17,
+                    1,
+                    2,
+                    11,
+                    14,
+                    20,
+                    13,
+                    7,
+                    9,
+                    21,
+                    33
+                ]
+            }
+        ],
+        "MOA": [
+            {
+                "dictSynList": [
+                    "inhibitor"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityType": "MOA",
+                "exact_array": [
+                    {
+                        "fls": [
+                            4,
+                            737,
+                            746
+                        ]
+                    }
+                ],
+                "exact_string": "4#737-746",
+                "frag_vector_array": [
+                    "4#tent and selective c-Fms {!inhibitor!}, attenuated M-CSF mediat"
+                ],
+                "hitCount": 1,
+                "hitID": "MOA4",
+                "hit_loc_vector": [
+                    4
+                ],
+                "kvp": {
+                    "entityType": "MOA"
+                },
+                "name": "Inhibitor",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "inhibitor"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    8
+                ]
+            }
+        ],
+        "PROTYP": [
+            {
+                "dictSynList": [
+                    "p90rsk"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "Genes": "RPS6KL1,RPS6,RPS6KA4,RPS6KA3,RPS6KA6,RPS6KA5,RPS6KB1,RPS6KC1,RPS6KB3,RPS6KA2,RPS6KA1,RPS6KB2,PAK2",
+                    "_termite_id": "TPT000406"
+                },
+                "entityType": "PROTYP",
+                "exact_array": [
+                    {
+                        "fls": [
+                            3,
+                            691,
+                            697
+                        ]
+                    }
+                ],
+                "exact_string": "3#691-697",
+                "frag_vector_array": [
+                    "3#eam effectors Erk1/2 and {!p90RSK!}."
+                ],
+                "hitCount": 1,
+                "hitID": "PROTYP982",
+                "hit_loc_vector": [
+                    3
+                ],
+                "kvp": {
+                    "entityType": "PROTYP"
+                },
+                "mappings": [
+                    "CHEMBL_TARGET|CHEMBL2111330|xRef:match",
+                    "UNIFAM|FA04758|closeMatch:match\"Protein kinase superfamily. Ser/Thr protein kinase family. S6 kinase subfamily\"",
+                    "UNIFAM|FA03067|closeMatch:match\"S6 kinase subfamily\"",
+                    "SCIBITE|PROTYP:PROTYP982|seeAlso"
+                ],
+                "name": "ribosomal protein s6 kinase",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "p90RSK"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "taxon": {
+                    "PROTYP": {
+                        "$PROTYP2/$PROTYP6/$PROTYP982": "kinase/protein kinase/ribosomal protein s6 kinase"
+                    }
+                },
+                "totnosyns": 1,
+                "word_pos_array": [
+                    35
+                ]
+            },
+            {
+                "dictSynList": [
+                    "colony stimulating factor"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "Genes": "CSF1R,IL3,CSF3,CSF2,CSF3R,IL5,CSF1,THPO,CEBPG,PAM16,CSF2RB,CSF2RA",
+                    "_termite_id": "TPT003099"
+                },
+                "entityType": "PROTYP",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            441,
+                            466
+                        ]
+                    }
+                ],
+                "exact_string": "2#441-466",
+                "frag_vector_array": [
+                    "2#entrations of macrophage-{!colony stimulating factor!} (M-CSF)."
+                ],
+                "hitCount": 1,
+                "hitID": "PROTYP90253",
+                "hit_loc_vector": [
+                    2
+                ],
+                "kvp": {
+                    "entityType": "PROTYP",
+                    "hyphenated": 1
+                },
+                "mappings": [],
+                "name": "colony stimulating factor",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "colony stimulating factor"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    39
+                ]
+            }
+        ],
+        "SBIO": [
+            {
+                "dictSynList": [
+                    "inhibitor"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityType": "SBIO",
+                "exact_array": [
+                    {
+                        "fls": [
+                            4,
+                            737,
+                            746
+                        ]
+                    }
+                ],
+                "exact_string": "4#737-746",
+                "frag_vector_array": [
+                    "4#tent and selective c-Fms {!inhibitor!}, attenuated M-CSF mediat"
+                ],
+                "hitCount": 1,
+                "hitID": "SBIO00287",
+                "hit_loc_vector": [
+                    4
+                ],
+                "kvp": {
+                    "entityType": "SBIO"
+                },
+                "name": "Inhibitor",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "inhibitor"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    8
+                ]
+            },
+            {
+                "dictSynList": [
+                    "concentrations"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityType": "SBIO",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            412,
+                            426
+                        ]
+                    }
+                ],
+                "exact_string": "2#412-426",
+                "frag_vector_array": [
+                    "2#in response to limiting {!concentrations!} of macrophage-colony sti"
+                ],
+                "hitCount": 1,
+                "hitID": "SBIO00376",
+                "hit_loc_vector": [
+                    2
+                ],
+                "kvp": {
+                    "entityType": "SBIO"
+                },
+                "name": "Concentration",
+                "nonambigsyns": 0,
+                "realSynList": [
+                    "concentrations"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    36
+                ]
+            },
+            {
+                "dictSynList": [
+                    "therapeutic target"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityType": "SBIO",
+                "exact_array": [
+                    {
+                        "fls": [
+                            7,
+                            1341,
+                            1359
+                        ]
+                    }
+                ],
+                "exact_string": "7#1341-1359",
+                "frag_vector_array": [
+                    "7#may provide a potential {!therapeutic target!} for treating NF1 associa"
+                ],
+                "hitCount": 1,
+                "hitID": "SBIO00063",
+                "hit_loc_vector": [
+                    7
+                ],
+                "kvp": {
+                    "entityType": "SBIO"
+                },
+                "name": "Drug Target",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "therapeutic target"
+                ],
+                "rejected": false,
+                "score": 1,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    29
+                ]
+            }
+        ],
+        "SPECIES": [
+            {
+                "dictSynList": [
+                    "mice",
+                    "mice",
+                    "mice"
+                ],
+                "docID": "_document",
+                "docTitle": "",
+                "entityMeta": {
+                    "_ext_name": "MESH",
+                    "_ext_uri": "http://www.nlm.nih.gov/cgi/mesh/2013/MB_cgi?field=uid&term=D051379",
+                    "_termite_id": "TSP003368"
+                },
+                "entityType": "SPECIES",
+                "exact_array": [
+                    {
+                        "fls": [
+                            2,
+                            258,
+                            262
+                        ]
+                    },
+                    {
+                        "fls": [
+                            5,
+                            913,
+                            917
+                        ]
+                    },
+                    {
+                        "fls": [
+                            6,
+                            1067,
+                            1071
+                        ]
+                    }
+                ],
+                "exact_string": "2#258-262,5#913-917,6#1067-1071",
+                "frag_vector_array": [
+                    "2#F1 patients and Nf1(+/-) {!mice!} exhibit increased differ",
+                    "5#to Nf1(+/-) osteoporotic {!mice!} induced by ovariectomy (",
+                    "6#one loss in Nf1(+/-)-OVX {!mice!} by reducing osteoclast d"
+                ],
+                "hitCount": 3,
+                "hitID": "D051379",
+                "hit_loc_vector": [
+                    2,
+                    5,
+                    6
+                ],
+                "kvp": {
+                    "entityType": "SPECIES"
+                },
+                "name": "Mice",
+                "nonambigsyns": 1,
+                "realSynList": [
+                    "mice",
+                    "mice",
+                    "mice"
+                ],
+                "rejected": false,
+                "score": 4,
+                "sourceID": "",
+                "sourceTitle": "",
+                "totnosyns": 1,
+                "word_pos_array": [
+                    15,
+                    9,
+                    11
+                ]
+            }
+        ]
+    },
+    "RESP_WARNINGS": null
+}

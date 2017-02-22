@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="medal" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <labels>
+    <entry value="asap"/>
+    <entry value="asap-conn-dispname-medal"/>
+  </labels>
+  <scanner class="com.attivio.connector.CsvScanner">
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="startDirectory" value="${factbook.content.dir}/medals.csv"/>
+      <property name="idFieldFormat" value="MEDAL-%s"/>
+      <property name="firstRowAreFieldNames" value="true"/>
+      <list name="idFields">
+        <entry value="country"/>
+      </list>
+      <list name="wildcardExcludeFilter">
+        <entry value=".*"/>
+        <entry value="*~"/>
+        <entry value="~*"/>
+        <entry value="$*"/>
+        <entry value="*.tmp"/>
+      </list>
+      <list name="wildcardFilter">
+        <entry value="*.csv"/>
+      </list>
+    </properties>
+  </scanner>
+  <feeder>
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="ingestWorkflowName" value="medalIngest"/>
+      <property name="prefix" value="medal-"/>
+      <map name="staticFields">
+        <property name="asap.field.list" value="id_dec,country,gold_i,silver_i,bronze_i,total_i"/>
+        <property name="asap.application" value="Factbook"/>
+        <property name="asap.source.structured" value="true"/>
+        <property name="table" value="medal"/>
+        <property name="asap.source.type" value="CSV Connector"/>
+      </map>
+      <map name="renamedFields">
+        <property name="id" value="id_dec"/>
+      </map>
+    </properties>
+  </feeder>
+</connector>

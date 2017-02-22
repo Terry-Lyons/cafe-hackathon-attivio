@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:biz="http://www.attivio.com/configuration/features/businesscenter" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/businesscenter http://www.attivio.com/configuration/features/businesscenterFeatures.xsd">
+  <biz:businessCenter component="applyBusinessCenter" enabled="true" index="abc-index" nodeset="searchers" searchWorkflow="search" service="businessCenterService">
+    <biz:where position="after" relative-component="queryParser" skip-if-exists="false" workflow="queryInit"/>
+    <biz:spellCheckField>title</biz:spellCheckField>
+    <biz:spellCheckField>content</biz:spellCheckField>
+  </biz:businessCenter>
+</ff:features>

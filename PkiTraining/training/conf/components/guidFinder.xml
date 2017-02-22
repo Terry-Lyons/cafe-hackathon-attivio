@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="guidFinder" class="com.attivio.platform.transformer.ingest.field.ExtractRegexEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="entityType" value="guid"/>
+    <property name="outputAsField" value="false"/>
+    <property name="outputAsEntityTag" value="false"/>
+    <list name="regularExpressions">
+      <entry value="(\{{0,1}([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\}{0,1})"/>
+    </list>
+  </properties>
+</component>

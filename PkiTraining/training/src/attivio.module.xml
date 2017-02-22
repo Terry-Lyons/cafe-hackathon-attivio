@@ -1,0 +1,16 @@
+
+<attivio>
+  <module name="module-training" version="-1">
+    <description>Module containing sample SDK code.</description>
+    <connectors>
+      <connector name="dummyconnector" class="com.sisu.training.DummyConnector"/>
+    </connectors>
+    <components>
+      <component class="com.acme.SampleAdvancedIngestTransformer"/>
+      <component class="com.acme.SampleQueryRewriteTransformer"/>
+      <component class="com.acme.SampleQueryTransformer"/>
+      <component class="com.acme.SampleResponseTransformer"/>
+      <component class="com.acme.SampleSimpleIngestTransformer"/>
+    </components>
+  </module>
+</attivio>

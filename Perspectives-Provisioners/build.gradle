@@ -1,0 +1,105 @@
+group 'com.sisu'
+version '0.1.1'
+description 'Custom Perspectives data Provisioners for Attivio'
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.8
+
+String attivioSdk = ""
+Properties props = new Properties()
+props.load(new FileInputStream(rootDir.getAbsolutePath() + '/secret.properties'))
+if(System.getenv("ATTIVIO_SDK")) {
+    attivioSdk = System.getenv("ATTIVIO_SDK").trim()
+}else {
+    attivioSdk = props.getProperty("attivio.sdk", "")
+}
+if (attivioSdk.isEmpty()) {
+    System.err.println("Attivio SDK not found! Either set your ATTIVIO_SDK env variable or add attivio.sdk to secret.propreties!")
+}
+
+FileTree attivioSdkFiles = fileTree(include: ['*.jar'], dir: attivioSdk, excludes: ['slf4j-log4j*'])
+
+
+repositories {
+    mavenCentral()
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/internal/'
+    }
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/snapshots/'
+    }
+}
+
+dependencies {
+    compile attivioSdkFiles
+    compile 'com.opencsv:opencsv:3.7'
+
+    testCompile "org.mockito:mockito-core:1.+"
+    testCompile 'org.assertj:assertj-core:3.5.2'
+    testCompile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.6.1'
+    testCompile 'org.apache.curator:curator-test:2.7.1'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+clean {
+    delete 'lib', 'lib-override', 'resources', 'org.junit.Temp*'
+}
+
+task collectDeps(type:Copy, dependsOn:build) {
+    copy {
+        //from 'build/libs'
+        from configurations.compile.filter { !(it in attivioSdkFiles.files) }
+        into 'build/libs'
+    }
+}
+
+task distZip(type:Zip, dependsOn:collectDeps) {
+
+    classifier = 'dist'
+    //extension = 'tar.gz'
+    //compression = Compression.
+
+    from('build/libs') {
+        into 'lib'
+    }
+
+    from('lib') {
+        into 'lib'
+    }
+
+    from('conf') {
+        into 'conf'
+    }
+
+    from('resources') {
+        into 'resources'
+    }
+
+}
+
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username props.getProperty('maven.user')
+                password props.getProperty('maven.password')
+            }
+            url 'https://maven.sisu.io/repository/snapshots/'
+        }
+    }
+    publications {
+        jar(MavenPublication) {
+            from components.java
+        }
+    }
+}

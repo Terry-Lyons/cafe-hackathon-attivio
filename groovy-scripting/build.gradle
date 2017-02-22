@@ -1,0 +1,130 @@
+group 'com.sisu'
+version '0.6.1'
+
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+sourceCompatibility = 1.8
+
+String attivioSdk = ""
+Properties props = new Properties()
+props.load(new FileInputStream(rootDir.getAbsolutePath() + '/secret.properties'))
+if(System.getenv("ATTIVIO_SDK")) {
+    attivioSdk = System.getenv("ATTIVIO_SDK").trim()
+}else {
+    attivioSdk = props.getProperty("attivio.sdk", "")
+}
+if (attivioSdk.isEmpty()) {
+    System.err.println("Attivio SDK not found! Either set your ATTIVIO_SDK env variable or add attivio.sdk to secret.propreties!")
+}
+
+FileTree attivioSdkFiles = fileTree(include: ['*.jar'], dir: attivioSdk, excludes: ['slf4j-log4j*'])
+//FileTree addonSdkFiles = fileTree(include: ['*.jar'], dir: attivioSdk + '/addons/module-excelconnector')
+
+configurations {
+    moduleDist
+}
+
+test {
+    jvmArgs '-D_aie_test_addons=' + attivioSdk + '/addOns/'
+}
+
+clean {
+    delete 'lib', 'lib-override', 'resources'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/internal/'
+    }
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/snapshots/'
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy:2.4.7'
+    compile attivioSdkFiles
+    //compile addonSdkFiles
+    compile 'org.apache.ivy:ivy:2.4.0'
+
+    testCompile "org.mockito:mockito-core:1.+"
+    testCompile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.6.1'
+    testCompile 'org.assertj:assertj-core:3.5.2'
+    testCompile 'junit:junit:4.12'
+
+    //moduleDist addonSdkFiles
+}
+
+
+jar {
+    manifest {
+        attributes(
+                'Module': rootProject.name,
+                'Version': project.version
+        )
+    }
+    eachFile {
+        if (it.name == 'attivio.module.xml') {
+            it.filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
+                    module_name: rootProject.name,
+                    build_version: '1',
+                    aie_version: '5.1.9',
+                    description: rootProject.description
+            ])
+        }
+    }
+}
+
+task distZip(type: Zip, dependsOn: build) {
+    classifier = 'dist'
+    //extension = 'tar.gz'
+    //compression = Compression.GZIP
+
+    into('lib') {
+        from 'build/libs'
+        from configurations.compile.filter { !(it in attivioSdkFiles.files) }
+    }
+
+    /*
+    into('lib/addons/module-groovyexcelconnector') {
+        from configurations.moduleDist
+    }
+    */
+
+    from('conf') {
+        into 'conf'
+    }
+
+    from('resources/main') {
+        into 'resources'
+    }
+
+}
+
+String publishUrlFragment = project.version.endsWith('SNAPSHOT') ? 'snapshots/' : 'internal/'
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username props.getProperty('maven.user')
+                password props.getProperty('maven.password')
+            }
+            name 'snapshots'
+            url 'https://maven.sisu.io/repository/' + publishUrlFragment
+        }
+    }
+    publications {
+        lib(MavenPublication) {
+            from components.java
+        }
+    }
+}

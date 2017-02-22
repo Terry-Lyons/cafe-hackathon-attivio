@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workflow xmlns="http://www.attivio.com/configuration/type/workflowType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ingestPrincipals" type="ingest" xsi:schemaLocation="http://www.attivio.com/configuration/type/workflowType http://www.attivio.com/configuration/type/workflowType.xsd ">
+  <description>ingests principals</description>
+  <subflow name="modifyPrincipals"/>
+  <documentTransformer name="processIngestedPrincipals"/>
+  <documentTransformer name="standardAnalyzer"/>
+  <subflow name="indexer"/>
+</workflow>

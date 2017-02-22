@@ -1,0 +1,201 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$installers = "../installers/"
+
+$setup_script = <<SCRIPT
+sudo yum -y install nano
+sudo mkdir -p /opt/attivio
+sudo chown -R vagrant /opt/attivio
+sudo chgrp -R vagrant /opt/attivio
+printf "\n\
+* soft nofile 65536 \n\
+* hard nofile 65536 \n\
+* soft memlock unlimited \n\
+* hard memlock unlimited \n\
+* soft as unlimited \n\
+* hard as unlimited \n" \
+  | sudo tee -a /etc/security/limits.conf
+printf "\n\
+* soft nproc 10240 \n\
+* hard nproc 10240 \n" \
+  | sudo tee -a /etc/security/limits.d/90-nproc.conf
+printf "vm.max_map_count = 131072" \
+  | sudo tee -a /etc/sysctl.conf
+SCRIPT
+
+$install_script = <<SCRIPT
+cd /opt/attivio/installers
+INSTALLER="$(ls AIE-5.1.6*)"
+gunzip $INSTALLER
+AIE_HOME=/opt/attivio/aie_${INSTALLER:4:5}
+sh ${INSTALLER/.sh*/.sh} -q -dir $AIE_HOME \
+ -V /opt/attivio/installers/attivio.license
+
+for module in $(ls aie-module*)
+  do
+    tar xvfz $module -C $AIE_HOME
+  done
+
+# license install
+# cp rlp-license.xml $AIE_HOME/lib/basisTech/licenses/
+cp attivio.license $AIE_HOME/conf/
+cp aie-patch* $AIE_HOME/lib-override
+
+# jdk install
+cd /opt/attivio/installers
+JDK="$(ls jdk-7*)"
+sudo yum localinstall -y $JDK
+
+# ant install
+ANT="$(ls apache-ant-*)"
+sudo tar xvfz $ANT -C /opt/
+
+# sysv service install
+sudo sed -i "s|ATTIVIO_HOME=|ATTIVIO_HOME=$AIE_HOME|g" /opt/attivio/installers/aie-agent-daemon
+sudo cp /opt/attivio/installers/aie-agent-daemon /etc/rc.d/init.d
+sudo chmod 755 /etc/rc.d/init.d/aie-agent-daemon
+
+# environment setup
+printf "export ANT_HOME=/opt/${ANT:0:16}\n" \
+ | sudo -u vagrant tee -a /home/vagrant/.bash_profile
+printf "export ATTIVIO_HOME=$AIE_HOME\n" \
+ | sudo -u vagrant tee -a /home/vagrant/.bash_profile
+ printf "export JAVA_HOME=/usr/java/latest\n" \
+  | sudo -u vagrant tee -a /home/vagrant/.bash_profile
+printf 'export PATH=$PATH:$ANT_HOME/bin:$ATTIVIO_HOME/bin\n' \
+ | sudo -u vagrant tee -a /home/vagrant/.bash_profile
+
+#mysql driver
+cp /vagrant/mysql/mysql*.jar $AIE_HOME/lib/addons/module-dbconnector/
+sudo chown -R vagrant /opt/attivio
+sudo chgrp -R vagrant /opt/attivio
+SCRIPT
+
+$postgres_script = <<SCRIPT
+
+SCRIPT
+
+$mysql_script = <<SCRIPT
+
+sudo apt-get update
+# per http://stackoverflow.com/questions/7739645/install-mysql-on-ubuntu-without-password-prompt
+
+export DEBIAN_FRONTEND=noninteractive
+sudo -E apt-get -q -y install mysql-server
+
+mysqladmin -u root password vagrant
+
+sudo sed -i "s/127.0.0.1/0.0.0.0/g" /etc/mysql/my.cnf
+
+printf "[client]\n\
+host=127.0.0.1\n\
+user=root\n\
+password=vagrant\n\
+\n\
+[mysql]\n\
+pager=/usr/bin/less\n" | \
+  sudo -u vagrant tee /home/vagrant/.my.cnf
+
+mysql -u root -pvagrant -e 'SOURCE /vagrant/mysql/sakila-schema.sql;'
+mysql -u root -pvagrant  -e 'SOURCE /vagrant/mysql/sakila-data.sql;'
+mysql -u root -pvagrant -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'vagrant' WITH GRANT OPTION;"
+mysql -u root -pvagrant  -e 'FLUSH PRIVILEGES;'
+
+sudo service mysql restart
+
+SCRIPT
+
+nodes = {
+  :attivio =>  {
+    :hostname => "attivio",
+    :ip => "192.168.0.51",
+    :box => "box-cutter/centos67-desktop",
+    :ram => 8192,
+    :cpus => 2
+  },
+  :postgres => {
+    :hostname => "postgres",
+    :ip => "192.168.0.52",
+    :box => "ubuntu/trusty64",
+    :ram => 2048,
+    :cpus => 2
+  },
+  :mysql => {
+    :hostname => "mysql",
+    :ip => "192.168.0.53",
+    :box => "ubuntu/trusty64",
+    :ram => 2048,
+    :cpus => 2
+  },
+}
+
+Vagrant.configure(2) do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  config.vm.define "attivio", primary: true do |attivio|
+
+    attivio.vm.box = "box-cutter/centos67-desktop"
+
+    attivio.vm.hostname = nodes[:attivio][:hostname] + ".box"
+    attivio.vm.network :private_network, ip: nodes[:attivio][:ip]
+    attivio.vm.network "forwarded_port", guest: 16999, host: 17999
+    attivio.vm.network "forwarded_port", guest: 17000, host: 18000
+    attivio.vm.network "forwarded_port", guest: 17001, host: 18001
+    attivio.vm.network "forwarded_port", guest: 17016, host: 18016
+
+    attivio.vm.provision "shell", name: "Environment Prep", inline: $setup_script, run: "once"
+    attivio.vm.provision "file", source: $installers, destination: "/opt/attivio/", run: "once"
+    attivio.vm.provision "shell", name: "Attivio Setup", inline: $install_script, run: "once"  # make sure you have the vagrant-reload plugin installed:
+    attivio.vm.provision "shell", name: "Attivio Agent Start", inline: "sudo /etc/init.d/aie-agent-daemon start", run: "always"
+    #   $ vagrant plugin install vagrant-reload
+    attivio.vm.provision :reload
+
+    attivio.vm.provider "virtualbox" do |vb|
+      # Display the VirtualBox GUI when booting the machine
+      vb.gui = true
+       # Customize the amount of memory on the VM:
+      vb.memory = nodes[:attivio][:ram]
+      vb.cpus = nodes[:attivio][:cpus]
+    end
+  end
+
+  config.vm.define "postgres", autostart: false do |postgres|
+    postgres.vm.box = nodes[:postgres][:box]
+
+    postgres.vm.hostname = nodes[:postgres][:hostname] + ".box"
+    postgres.vm.network :private_network, ip: nodes[:postgres][:ip]
+    postgres.vm.network "forwarded_port", guest: 5432, host: 15432
+
+    postgres.vm.provision "shell", path: "postgres-bootstrap.sh"
+
+    postgres.vm.provider "virtualbox" do |vb|
+      # Display the VirtualBox GUI when booting the machine
+      vb.gui = false
+       # Customize the amount of memory on the VM:
+      vb.memory = nodes[:postgres][:ram]
+      vb.cpus = nodes[:postgres][:cpus]
+    end
+  end
+
+  config.vm.define "mysql", autostart: false do |mysql|
+    mysql.vm.box = nodes[:mysql][:box]
+
+    mysql.vm.hostname = nodes[:mysql][:hostname] + ".box"
+    mysql.vm.network :private_network, ip: nodes[:mysql][:ip]
+    mysql.vm.network "forwarded_port", guest: 3306, host: 13306
+
+    mysql.vm.provision "shell", name: "install mysql", inline: $mysql_script, run: "once"
+
+    mysql.vm.provider "virtualbox" do |vb|
+      # Display the VirtualBox GUI when booting the machine
+      vb.gui = false
+       # Customize the amount of memory on the VM:
+      vb.memory = nodes[:mysql][:ram]
+      vb.cpus = nodes[:mysql][:cpus]
+    end
+  end
+
+end

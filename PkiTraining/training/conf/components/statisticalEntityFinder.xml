@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="statisticalEntityFinder" class="com.attivio.platform.transformer.ingest.field.ExtractStatisticalEntities" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <list name="models">
+      <entry value="${entityextraction.statistical.models.person_organization_location}"/>
+    </list>
+    <map name="phraseDictionaries"/>
+    <map name="entityMap">
+      <property name="PER" value="people"/>
+      <property name="ORG" value="company"/>
+      <property name="LOC" value="location"/>
+    </map>
+  </properties>
+</component>

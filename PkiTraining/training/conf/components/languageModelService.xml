@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="languageModelService" class="com.attivio.platform.service.LanguageModelService" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <map name="models">
+      <map name="en">
+        <property name="1" value="languagemodel/lm/en/1grams.bin"/>
+        <property name="2" value="languagemodel/lm/en/2grams.bin"/>
+        <property name="3" value="languagemodel/lm/en/3grams.bin"/>
+        <property name="4" value="languagemodel/lm/en/4grams.bin"/>
+        <property name="5" value="languagemodel/lm/en/5grams.bin"/>
+      </map>
+    </map>
+  </properties>
+</component>

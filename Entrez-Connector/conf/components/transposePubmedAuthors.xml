@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="transposePubmedAuthors" class="com.sisu.attivio.transformer.ingest.TransposeIntoSingleStringField" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <property name="separator" value=", "/>
+    <property name="outputFieldName" value="author"/>
+    <list name="fieldNames">
+      <entry value="author_lastname_s"/>
+      <entry value="author_forename_s"/>
+    </list>
+  </properties>
+</component>

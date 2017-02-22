@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 Attivio Inc., All rights reserved. -->
+<project name="AttivioSampleBuildFile" default="deploy" basedir=".">
+
+  <!-- this will turn into your default jar name and module version -->
+  <property name="module.name" value="training" />
+  <property name="module.version" value="0" />
+
+  <!-- point to your attivio.home and project directory, this is relative based on the installed paths -->
+  <property name="attivio.home" location="/opt/attivio/aie_5.1.6" />
+  <property name="attivio.project" location="/vagrant/training" />
+  
+  <!-- 
+  *******************************************************************************
+  you should not need to change anything below here 
+  *******************************************************************************
+  -->
+
+  <path id="compile.classpath">
+    <fileset dir="${attivio.home}">
+      <include name="lib-override/*.jar" />
+      <include name="lib/*.jar" />
+    </fileset>
+  </path>
+  
+  <path id="test.classpath">
+    <path refid="compile.classpath" />
+    <fileset dir="${attivio.home}">
+      <include name="sdk/lib-test/*.jar" />
+    </fileset>
+    <fileset dir="${attivio.home}">
+      <include name="lib-override/*.jar" />
+      <include name="lib/*.jar" />
+    </fileset>
+  </path>
+
+  <target name="init">
+    <mkdir dir="build" />
+    <mkdir dir="build/classes" />
+    <mkdir dir="build/lib" />
+    <mkdir dir="build/test" />
+    <tstamp>
+      <format property="timestamp" pattern="yyyyMMdd" />
+    </tstamp>
+    <available file="${attivio.project}/webapps/${module.name}/WEB-INF/lib"  property="sail.lib.present"/>
+  </target>
+
+  <target name="compile" depends="init" description="compile the source ">
+    <javac classpathref="compile.classpath" srcdir="src" destdir="build/classes" debug="on" encoding="UTF-8" includeantruntime="false" />
+    <copy todir="build/classes">
+      <fileset dir="src" includes="**/*.xml" />
+      <fileset dir="src" includes="**/*.vm" />
+      <fileset dir="src" includes="**/*.properties" />
+    </copy>
+  </target>
+
+  <target name="dist" depends="compile" description="generate the distribution">
+    <jar jarfile="build/lib/${module.name}.jar" basedir="build/classes">
+      <manifest>
+        <section name="Attivio">
+          <attribute name="Built-On" value="${timestamp}" />
+          <attribute name="Module" value="${module.name}" />
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="deploy" depends="deploy-sail" description="copy custom code jar file to attivio project install">
+    <mkdir dir="${attivio.project}/lib" />
+    <copy file="build/lib/${module.name}.jar" tofile="${attivio.project}/lib/${module.name}.jar" />
+  </target>
+
+  <target name="deploy-sail" depends="dist" description="copy custom code jar file to sail webapp lib folder" if="sail.lib.present">
+    <copy file="build/lib/${module.name}.jar" tofile="${attivio.project}/webapps/${module.name}/WEB-INF/lib/${module.name}.jar" />
+  </target>
+  
+  <target name="package" depends="dist" description="zips all project contents into a single file for copying to a remote server">
+    <zip destfile="build/test-build-dist.zip" >
+      <zipfileset dir="conf" prefix="conf"/>
+	    <zipfileset dir="lib-override" prefix="lib-override"/>
+	    <zipfileset dir="lib" prefix="lib"/>
+      <zipfileset dir="build/lib" prefix="lib"/>
+      <zipfileset dir="webapps" prefix="webapps"/>
+      <zipfileset dir="." includes="start.*" />
+    </zip>
+  </target>
+
+  <target name="clean" description="clean up">
+    <delete dir="build" />
+  </target>
+
+  <target name="compiletests" depends="compile" description="compile the test source ">
+    <javac srcdir="test" destdir="build/test" debug="on" encoding="UTF-8" includeantruntime="false" >
+      <classpath>
+        <path refid="test.classpath" />
+        <pathelement location="build/classes" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="test" description="Runs unit tests" depends="compiletests">
+    <junit printsummary="yes" haltonfailure="no" dir="${basedir}" fork="yes" >
+      <jvmarg value="-Dattivio.home=${attivio.home}" />
+      <jvmarg value="-Dattivio.project=${basedir}" />
+      <classpath>
+        <path refid="test.classpath" />
+        <pathelement path="build/classes" />
+        <pathelement path="build/test" />
+      </classpath>
+      <formatter type="xml" />
+      <formatter type="plain" if="test.plainFormatter" usefile="false" />
+      <batchtest todir="build/test">
+        <fileset dir="test">
+          <include name="**/Test*.java" />
+          <include name="**/**Test.java" />
+          <include name="**/**TestCase.java" />
+          <exclude name="**/Abstract*.java" />
+          <exclude name="**/TestExceptionStrategy.java" />
+          <exclude name="**/TestUtils.java" />
+          <exclude name="**/SpecialTest*.java" />
+        </fileset>
+      </batchtest>
+    </junit>
+    <junitreport todir="build/test">
+      <fileset dir="build/test">
+        <include name="TEST-*.xml" />
+      </fileset>
+      <report format="frames" todir="build/test" />
+    </junitreport>
+  </target>
+
+</project>

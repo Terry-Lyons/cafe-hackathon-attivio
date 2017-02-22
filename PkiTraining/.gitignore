@@ -1,0 +1,21 @@
+# Attivio stuff
+training/.aie/
+training/.cluster
+training/aie-cli.log
+aie-patch*
+
+# Java Ant/Eclipse/Maven build output
+training/bin/
+training/build/
+training/lib/*
+training/!lib/README.md
+training/.idea/
+training/*.iml
+training/target/
+
+# Vagrant
+.vagrant/
+.DS_Store
+
+nanjing/*
+avro/*

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component xmlns="http://www.attivio.com/configuration/type/componentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="wordClusterModelService" class="com.attivio.platform.util.entity.features.WordClusterModelService" xsi:schemaLocation="http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <properties>
+    <map name="models">
+      <property name="en" value="${entityextraction.statistical.models.word_clusters}"/>
+    </map>
+  </properties>
+</component>
