@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="sampleAieIndexScanner" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <scanner class="com.sisu.pki.connector.AieIndexScanner">
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="query" value="table:HPReports"/>
+      <property name="queryLanguage" value="Advanced"/>
+      <property name="hostAddress" value="linopspki01.dmz.attivio.com"/>
+      <property name="searchWorkflow" value="search"/>
+      <property name="hostBasePort" value="17000"/>
+    </properties>
+  </scanner>
+  <feeder class="com.attivio.connector.DirectMessagePublisher">
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="prefix" value="AIEDOC-"/>
+      <map name="sizeToDomain"/>
+      <list name="documentStoreFilterFields">
+        <entry value="table"/>
+      </list>
+      <map name="staticFields">
+        <property name="table" value="test110116"/>
+      </map>
+    </properties>
+  </feeder>
+</connector>

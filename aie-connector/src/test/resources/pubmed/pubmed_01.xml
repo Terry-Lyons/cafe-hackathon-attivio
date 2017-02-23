@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">13445058</PMID>
+        <DateCreated>
+            <Year>1957</Year>
+            <Month>12</Month>
+            <Day>01</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>2002</Year>
+            <Month>05</Month>
+            <Day>01</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0003-4738</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>15</Volume>
+                    <Issue>3</Issue>
+                    <PubDate>
+                        <MedlineDate>1957 May-Jun</MedlineDate>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Annals of allergy</Title>
+                <ISOAbbreviation>Ann Allergy</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Tripelennamine hydrochloride and chlorprophenpyridamine maleate; a comparison of their efficacies in the treatment of hay fever.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>297-304</MedlinePgn>
+            </Pagination>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>BANCROFT</LastName>
+                    <ForeName>C M</ForeName>
+                    <Initials>CM</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType>Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>Not Available</Country>
+            <MedlineTA>Ann Allergy</MedlineTA>
+            <NlmUniqueID>0372346</NlmUniqueID>
+            <ISSNLinking>0003-4738</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance>Histamine H1 Antagonists</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>3C5ORO99TY</RegistryNumber>
+                <NameOfSubstance>Tripelennamine</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>OM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Histamine H1 Antagonists</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Rhinitis, Allergic, Seasonal</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapy</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Tripelennamine</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+        <OtherID Source="CLML">5732:43379</OtherID>
+        <KeywordList Owner="NLM">
+            <Keyword MajorTopicYN="Y">ANTIHISTAMINICS/therapeutic use</Keyword>
+            <Keyword MajorTopicYN="Y">HAY FEVER/therapy</Keyword>
+            <Keyword MajorTopicYN="Y">TRIPELENNAMINE/therapeutic use</Keyword>
+        </KeywordList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">13445058</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

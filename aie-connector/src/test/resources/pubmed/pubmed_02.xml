@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">13438228</PMID>
+        <DateCreated>
+            <Year>1957</Year>
+            <Month>12</Month>
+            <Day>01</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>2002</Year>
+            <Month>05</Month>
+            <Day>01</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0016-5751</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>17</Volume>
+                    <Issue>5</Issue>
+                    <PubDate>
+                        <Year>1957</Year>
+                        <Month>May</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Geburtshilfe und Frauenheilkunde</Title>
+                <ISOAbbreviation>Geburtshilfe Frauenheilkd</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>[Tests of conservative therapy of pre-eclampsia].</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>438-44</MedlinePgn>
+            </Pagination>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>SCHEIDT</LastName>
+                    <ForeName>R G</ForeName>
+                    <Initials>RG</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>EISERMANN</LastName>
+                    <ForeName>H</ForeName>
+                    <Initials>H</Initials>
+                </Author>
+            </AuthorList>
+            <Language>ger</Language>
+            <PublicationTypeList>
+                <PublicationType>Journal Article</PublicationType>
+            </PublicationTypeList>
+            <VernacularTitle>Unsere Erfahrungen mit der konservativen Behandlung der Präeklampsie.</VernacularTitle>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>Not Available</Country>
+            <MedlineTA>Geburtshilfe Frauenheilkd</MedlineTA>
+            <NlmUniqueID>0370732</NlmUniqueID>
+            <ISSNLinking>0016-5751</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance>Phenothiazines</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>9E338QE28F</RegistryNumber>
+                <NameOfSubstance>Meperidine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>GS9EX7QNU6</RegistryNumber>
+                <NameOfSubstance>phenothiazine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>U42B7VYA4P</RegistryNumber>
+                <NameOfSubstance>Chlorpromazine</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>OM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Chlorpromazine</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Meperidine</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Phenothiazines</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N">Pre-Eclampsia</DescriptorName>
+                <QualifierName MajorTopicYN="Y">therapy</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+        <OtherID Source="CLML">5732:36492</OtherID>
+        <KeywordList Owner="NLM">
+            <Keyword MajorTopicYN="Y">CHLORPROMAZINE/therapeutic use</Keyword>
+            <Keyword MajorTopicYN="Y">MEPERIDINE/therapeutic use</Keyword>
+            <Keyword MajorTopicYN="Y">PHENOTHIAZINE/related compounds</Keyword>
+            <Keyword MajorTopicYN="Y">PREGNANCY TOXEMIAS/therapy</Keyword>
+        </KeywordList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1957</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">13438228</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>
