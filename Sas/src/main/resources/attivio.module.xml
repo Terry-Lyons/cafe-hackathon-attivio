@@ -1,0 +1,8 @@
+<attivio>
+    <module name="module-sas7bdat-connector" version="3" aie.version="5.1.8">
+        <description>Connector for SAS7BDAT data files.</description>
+    </module>
+    <connectors>
+        <connector name="sasDataFileScanner" class="com.sisu.pki.connector.SasDataFileScanner"/>
+    </connectors>
+</attivio>

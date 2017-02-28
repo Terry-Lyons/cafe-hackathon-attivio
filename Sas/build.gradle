@@ -1,0 +1,168 @@
+group 'com.sisu'
+version '0.7.0'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+
+configurations {
+    nativeLib
+}
+
+// Configure Secrets and SDK settings
+Properties props = new Properties()
+props.load(new FileInputStream(rootDir.getAbsolutePath() + '/secret.properties'))
+
+if (props.getProperty('attivio.sdk') == null) {
+  throw new InvalidUserDataException('You must set a path to the attivio SDK in your secret.properties!')
+}
+
+repositories {
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/snapshots/'
+    }
+    maven {
+        credentials {
+            username props.getProperty('maven.user')
+            password props.getProperty('maven.password')
+        }
+        url 'https://maven.sisu.io/repository/internal/'
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Module': 'sas7bdat-connector',
+                'Version': project.version
+        )
+    }
+}
+
+dependencies {
+    compile 'com.sisu:sas7bdat:0.7.1'
+    compile 'com.sisu:groovy-scripting:0.6.0'
+    compile 'org.jpy:jpy:0.9-SNAPSHOT'
+
+    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: props.getProperty('attivio.sdk'))
+
+    nativeLib group: 'com.sisu', name: 'sas7bdat', version: '0.6.0', classifier: 'natives', ext: 'zip'
+}
+
+task unpackNativeLibs(type:Copy) {
+  copy {
+    from zipTree(
+            configurations.nativeLib.find(
+                    { it.name.endsWith('natives.zip')}
+            )
+    )
+    include '**/**'
+    into 'build/resources'
+  }
+}
+
+task unpackPython(type:Copy, dependsOn:unpackNativeLibs) {
+    copy {
+        from zipTree('libs/python-3.5.2-embed-amd64.zip')
+        into 'build/python'
+    }
+}
+
+if(System.properties['os.name'].toString().startsWith('Win')) {
+    test {
+        dependsOn unpackPython
+        jvmArgs '-Djpy.jpyLib=' + rootDir.getAbsolutePath() + '/build/resources/native/win64/jpy.cp35-win_amd64.pyd'
+        jvmArgs '-Djpy.jdlLib=' + rootDir.getAbsolutePath() + '/build/resources/native/win64/jdl.cp35-win_amd64.pyd'
+        jvmArgs '-Djpy.pythonLib=' + rootDir.getAbsolutePath() + '/build/python/python35.dll'
+    }
+}else {
+    String nativeJpyFile
+    String nativeJdlFile
+    if(System.properties['os.name'].toString().startsWith('Lin')) {
+        nativeJpyFile = 'linux/jpy.cpython-35m-x86_64-linux-gnu.so'
+        nativeJdlFile = 'linux/jdl.cpython-35m-x86_64-linux-gnu.so'
+    }else {
+        nativeJpyFile = 'osx/jpy.cpython-35m-darwin.so'
+        nativeJdlFile = 'osx/jdl.cpython-35m-darwin.so'
+    }
+    test {
+        dependsOn unpackNativeLibs
+        jvmArgs '-Djpy.jpyLib=' + rootDir.getAbsolutePath() + '/build/resources/native/' + nativeJpyFile
+        jvmArgs '-Djpy.jdlLib=' + rootDir.getAbsolutePath() + '/build/resources/native/' + nativeJdlFile
+        jvmArgs '-Djpy.pythonLib=' + props.getProperty('jpy.pythonLib', '')
+    }
+}
+
+task distWin64(type: Zip, dependsOn: build) {
+    classifier = 'dist-win64'
+
+    from('conf') {
+        into 'conf'
+        include '**/**'
+    }
+
+    from('build/libs') {
+        into 'lib'
+    }
+
+    into('resources/python') {
+        from zipTree('libs/python-3.5.2-embed-amd64.zip')
+        include '**/**'
+    }
+
+    into('lib') {
+        from configurations.compile.filter { it.name.startsWith('jpy')}
+        from configurations.compile.filter { it.name.startsWith('sas7bdat')}
+        from configurations.compile.filter { it.name.startsWith('groovy')}
+    }
+
+    into('resources') {
+        from zipTree(
+                configurations.nativeLib.find(
+                        { it.name.endsWith('natives.zip')}
+                )
+        )
+        include '**/win64/**'
+        includeEmptyDirs = false
+    }
+}
+
+task distLinux(type: Tar, dependsOn: build) {
+    classifier = 'dist-lin64'
+    extension = 'tar.gz'
+    compression = Compression.GZIP
+
+    from('conf') {
+        into 'conf'
+        include '**/**'
+    }
+
+    from('build/libs') {
+        into 'lib'
+    }
+
+    into('lib') {
+        from configurations.compile.filter { it.name.startsWith('jpy')}
+        from configurations.compile.filter { it.name.startsWith('sas7bdat')}
+        from configurations.compile.filter { it.name.startsWith('groovy')}
+    }
+
+    into('resources') {
+        from zipTree(
+                configurations.nativeLib.find(
+                        { it.name.endsWith('natives.zip')}
+                )
+        )
+        include '**/linux/**'
+        includeEmptyDirs = false
+
+    }
+}
+
+task dist(dependsOn: [distLinux, distWin64]) {
+    System.out.println("Building all distros...")
+}

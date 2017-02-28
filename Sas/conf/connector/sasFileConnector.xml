@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="sasFileConnector" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+    <scanner class="com.sisu.pki.connector.SasDataFileScanner">
+        <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+            <property name="startDirectory" value="${attivio.project}/resources"/>
+            <map name="additionalCrawlDirectories"/>
+        </properties>
+    </scanner>
+    <feeder class="com.attivio.connector.DirectMessagePublisher">
+        <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+            <map name="sizeToDomain"/>
+            <list name="documentStoreFilterFields">
+                <entry value="table"/>
+            </list>
+        </properties>
+    </feeder>
+</connector>
